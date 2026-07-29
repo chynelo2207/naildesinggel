@@ -457,20 +457,20 @@ function Index() {
       <section id="oferta" className="py-16" style={{ background: "var(--gradient-soft)" }}>
         <div className="mx-auto max-w-2xl px-5 text-center">
           <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">OFERTA DE LANÇAMENTO</p>
-          <h2 className="mt-2 font-display text-3xl font-bold">
-            Leve o método completo por menos de um esmalte
+          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+            Menos que um esmalte. Um atendimento já paga o curso.
           </h2>
           <div className="mt-8 rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-soft)]">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-xs text-muted-foreground">
               Curso Completo de Unhas em Gel — Método Juliana Souza
             </p>
-            <p className="mt-4 text-sm text-muted-foreground line-through">De R$ 1.025</p>
-            <p className="font-display text-5xl font-bold text-rose-deep">R$ 27,90</p>
-            <p className="mt-1 text-xs text-muted-foreground">
+            <p className="mt-4 text-xs text-muted-foreground line-through">De R$ 1.025</p>
+            <p className="font-display text-4xl font-bold text-rose-deep">R$ 27,90</p>
+            <p className="mt-1 text-[11px] text-muted-foreground">
               pagamento único · acesso vitalício · sem mensalidade
             </p>
 
-            <ul className="mt-7 space-y-3 text-left text-sm">
+            <ul className="mt-7 space-y-2.5 text-left text-xs">
               {[
                 ["6 módulos com técnicas completas", "R$ 497"],
                 ["Aulas de encapsulado e nail art", "incluso"],
@@ -489,7 +489,7 @@ function Index() {
               ))}
             </ul>
 
-            <p className="mt-7 text-xs tracking-widest text-muted-foreground">
+            <p className="mt-7 text-[11px] tracking-widest text-muted-foreground">
               O PREÇO VOLTA PARA R$ 497 EM
             </p>
             <div className="mt-3 flex justify-center">
@@ -499,7 +499,7 @@ function Index() {
             <div className="mt-6">
               <CtaButton>Quero acesso imediato por R$ 27,90</CtaButton>
             </div>
-            <p className="mt-3 flex items-center justify-center gap-2 text-xs text-muted-foreground">
+            <p className="mt-3 flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
               <Lock className="size-3" /> Compra segura SSL · Acesso imediato
             </p>
           </div>
@@ -513,10 +513,10 @@ function Index() {
           <p className="mt-4 text-xs font-semibold tracking-[0.2em] text-rose-deep">
             7 DIAS DE GARANTIA — RISCO ZERO
           </p>
-          <h2 className="mt-2 font-display text-3xl font-bold">Garantia de 7 dias</h2>
-          <p className="mt-3 text-muted-foreground">
-            Não gostou? Devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia. Você
-            recupera o investimento já no primeiro atendimento.
+          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">O risco é todo meu</h2>
+          <p className="mt-3 text-sm text-muted-foreground">
+            Teste por 7 dias. Se não fizer sentido para você, devolvo 100% do valor — sem perguntas
+            e sem burocracia.
           </p>
         </div>
       </section>
@@ -524,17 +524,19 @@ function Index() {
       {/* FAQ */}
       <section className="bg-secondary/50 py-16">
         <div className="mx-auto max-w-2xl px-5">
-          <h2 className="text-center font-display text-3xl font-bold">Perguntas frequentes</h2>
+          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+            Perguntas frequentes
+          </h2>
           <div className="mt-8 space-y-3">
             {faq.map(([q, a]) => (
               <details key={q} className="rounded-2xl border border-border bg-card p-5">
-                <summary className="cursor-pointer list-none font-semibold">{q}</summary>
-                <p className="mt-3 text-sm text-muted-foreground">{a}</p>
+                <summary className="cursor-pointer list-none text-sm font-semibold">{q}</summary>
+                <p className="mt-3 text-xs text-muted-foreground">{a}</p>
               </details>
             ))}
           </div>
           <div className="mx-auto mt-10 max-w-md">
-            <CtaButton>Garantir vaga por R$ 27,90</CtaButton>
+            <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
           </div>
         </div>
       </section>
