@@ -296,7 +296,7 @@ function Index() {
 
       {/* SEGREDOS + MENTORA */}
       <section className="bg-secondary/50 py-12 sm:py-16">
-        <div className="mx-auto grid max-w-5xl items-center gap-8 px-4 sm:px-6 md:grid-cols-2">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div>
             <h2 className="font-display text-lg font-bold sm:text-2xl">O que ninguém te conta</h2>
             <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
