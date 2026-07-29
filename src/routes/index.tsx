@@ -85,8 +85,8 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:py-20">
           <div>
             <h1 className="font-display text-[26px] leading-[1.15] font-bold tracking-tight sm:text-4xl">
-              Aprenda a fazer unhas em gel que <span className="text-gold">duram 30 dias</span> e
-              cobre até 3x mais por atendimento
+              Faça unhas em gel que <span className="text-gold">duram 30 dias</span> — e cobre 3x
+              mais já no próximo atendimento
             </h1>
             <div className="relative mt-6">
               <img
@@ -111,7 +111,8 @@ function Index() {
               MÉTODO JULIANA SOUZA
             </p>
             <p className="mt-3 text-sm sm:text-base">
-              Passo a passo em vídeo para começar do zero, em casa, com um kit simples.
+              Do zero, em casa, com um kit simples. O passo a passo que já colocou +2.000 manicures
+              cobrando preço de salão.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
@@ -146,9 +147,9 @@ function Index() {
 
             <ul className="mt-5 grid gap-2 sm:grid-cols-2">
               {[
-                "Alongamento em gel e fibra que não descola",
-                "Acabamento nível salão de luxo",
-                "Quanto cobrar para lucrar de verdade",
+                "Alongamento que não descola nem na cliente mais difícil",
+                "Acabamento de salão premium desde a primeira mão",
+                "A tabela de preços que faz a cliente pagar mais",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2 text-xs">
                   <Check className="mt-0.5 size-4 shrink-0 text-rose-deep" />
@@ -159,7 +160,7 @@ function Index() {
 
             <div className="mt-6 rounded-2xl border border-border bg-card p-4 sm:p-5">
               <p className="flex items-center gap-2 text-[11px] font-semibold tracking-widest text-gold sm:text-xs">
-                <Clock className="size-4 shrink-0" /> A OFERTA DE 70% OFF EXPIRA EM
+                <Clock className="size-4 shrink-0" /> 97% DE DESCONTO — EXPIRA EM
               </p>
               <div className="mt-3">
                 <Countdown />
@@ -169,13 +170,13 @@ function Index() {
               </div>
               <p className="mt-3 flex items-center gap-2 text-xs">
                 <Flame className="size-4 text-gold" />
-                <strong>apenas 17 vagas</strong>
-                <span className="text-muted-foreground">restantes nesta turma</span>
+                <strong>restam 17 vagas</strong>
+                <span className="text-muted-foreground">nesta turma</span>
               </p>
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero aprender por R$ 27,90</CtaButton>
+              <CtaButton>Quero começar agora</CtaButton>
             </div>
             <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-muted-foreground">
               <span>✓ ACESSO IMEDIATO</span>
