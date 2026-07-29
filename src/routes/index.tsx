@@ -151,7 +151,7 @@ function Index() {
               </p>
             </div>
 
-            <ul className="mt-5 grid gap-2 xs:grid-cols-2 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-2 sm:grid-cols-2">
               {[
                 "Método exclusivo Juliana Souza",
                 "Alongamento em gel e fibra que não descola",
@@ -198,12 +198,12 @@ function Index() {
       </section>
 
       {/* GALERIA */}
-      <section className="py-14">
-        <h2 className="px-5 text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="py-10 sm:py-14">
+        <h2 className="px-4 text-center font-display text-lg font-bold sm:text-2xl">
           Resultados que fazem a cliente indicar você
         </h2>
-        <div className="mt-8 overflow-hidden">
-          <div className="flex w-max animate-marquee gap-4">
+        <div className="mt-6 overflow-hidden sm:mt-8">
+          <div className="flex w-max animate-marquee gap-3 sm:gap-4">
             {[...galeria, ...galeria].map((g, i) => (
               <img
                 key={i}
@@ -212,7 +212,7 @@ function Index() {
                 loading="lazy"
                 width={700}
                 height={700}
-                className="size-44 rounded-2xl object-cover sm:size-52"
+                className="size-32 rounded-xl object-cover sm:size-52 sm:rounded-2xl"
               />
             ))}
           </div>
@@ -220,14 +220,16 @@ function Index() {
       </section>
 
       {/* ANTES / DEPOIS */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto max-w-4xl px-5 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">A VIRADA DE CHAVE</p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+      <section className="bg-secondary/50 py-12 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
+            A VIRADA DE CHAVE
+          </p>
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
             O que muda quando você domina o método
           </h2>
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-6 text-left">
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-card p-5 text-left sm:p-6">
               <p className="text-sm font-semibold text-muted-foreground">Sem o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
@@ -243,7 +245,7 @@ function Index() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border-2 border-primary bg-card p-6 text-left">
+            <div className="rounded-2xl border-2 border-primary bg-card p-5 text-left sm:p-6">
               <p className="text-sm font-semibold text-rose-deep">Com o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
@@ -260,7 +262,7 @@ function Index() {
               </ul>
             </div>
           </div>
-          <blockquote className="mx-auto mt-10 max-w-2xl text-base italic sm:text-lg">
+          <blockquote className="mx-auto mt-8 max-w-2xl text-sm italic sm:text-lg">
             “Uma unha bem feita é cartão de visita. Quando o acabamento impressiona, a cliente
             volta e traz amiga.”
           </blockquote>
