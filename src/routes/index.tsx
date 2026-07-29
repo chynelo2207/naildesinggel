@@ -363,7 +363,9 @@ function Index() {
       {/* DEPOIMENTOS */}
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-5">
-          <h2 className="text-center font-display text-3xl font-bold">4,9 · +2.147 avaliações</h2>
+          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+            4,9 de 5 · o que dizem as alunas
+          </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {depoimentos.map(([texto, autor]) => (
               <figure key={autor} className="rounded-2xl border border-border bg-card p-6">
@@ -372,17 +374,17 @@ function Index() {
                     <Star key={i} className="size-4 fill-gold text-gold" />
                   ))}
                 </div>
-                <blockquote className="mt-3 text-sm italic">“{texto}”</blockquote>
-                <figcaption className="mt-4 text-xs text-muted-foreground">
+                <blockquote className="mt-3 text-xs italic">“{texto}”</blockquote>
+                <figcaption className="mt-4 text-[11px] text-muted-foreground">
                   {autor} · Compra verificada
                 </figcaption>
               </figure>
             ))}
           </div>
           <div className="mx-auto mt-10 max-w-md">
-            <CtaButton>Quero ser uma nail designer de referência</CtaButton>
-            <p className="mt-3 text-center text-xs text-muted-foreground">
-              +2.000 alunas já transformaram seu atendimento
+            <CtaButton>Quero esse resultado também</CtaButton>
+            <p className="mt-3 text-center text-[11px] text-muted-foreground">
+              +2.000 alunas já valorizaram o próprio trabalho
             </p>
           </div>
         </div>
@@ -394,18 +396,20 @@ function Index() {
           <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">
             BÔNUS EXCLUSIVOS DESTA TURMA
           </p>
-          <h2 className="mt-2 font-display text-3xl font-bold">R$ 528 em bônus liberados hoje</h2>
-          <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-            Saem do ar quando a turma fechar. Quem entra agora leva tudo junto, sem pagar a mais.
+          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+            R$ 528 em bônus liberados hoje
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
+            Saem do ar quando a turma fechar. Entrando agora, você leva tudo sem pagar nada a mais.
           </p>
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {bonus.map(([valor, titulo, desc]) => (
               <div key={titulo} className="rounded-2xl border border-border bg-card p-6 text-left">
-                <span className="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                <span className="rounded-full bg-primary px-3 py-1 text-[11px] font-semibold text-primary-foreground">
                   {valor}
                 </span>
-                <h3 className="mt-4 text-lg font-semibold">{titulo}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+                <h3 className="mt-4 text-sm font-semibold">{titulo}</h3>
+                <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
@@ -416,8 +420,8 @@ function Index() {
       <section className="py-16">
         <div className="mx-auto grid max-w-4xl gap-5 px-5 md:grid-cols-2">
           <div className="rounded-2xl border-2 border-primary bg-card p-6">
-            <h2 className="font-display text-2xl font-bold">É para você se…</h2>
-            <ul className="mt-4 space-y-3 text-sm">
+            <h2 className="font-display text-lg font-bold">É para você se…</h2>
+            <ul className="mt-4 space-y-2.5 text-xs">
               {[
                 "Faz unha há tempo, mas cobra barato e quer valorizar o trabalho",
                 "Perde horas com tutorial solto e ainda erra o acabamento",
@@ -432,8 +436,8 @@ function Index() {
             </ul>
           </div>
           <div className="rounded-2xl border border-border bg-card p-6">
-            <h2 className="font-display text-2xl font-bold">Não é para você se…</h2>
-            <ul className="mt-4 space-y-3 text-sm">
+            <h2 className="font-display text-lg font-bold">Não é para você se…</h2>
+            <ul className="mt-4 space-y-2.5 text-xs">
               {[
                 "Quer resultado sem praticar",
                 "Acredita em dinheiro fácil sem entregar qualidade",
