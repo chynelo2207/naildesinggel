@@ -340,7 +340,7 @@ function Index() {
               lotando a agenda em poucas semanas.
             </p>
             <p>
-              Coloquei tudo o que aprendeu em 14 anos neste método, para você pular a fase de
+              Coloquei tudo o que aprendi em 14 anos neste método, para você pular a fase de
               tentativa e erro.
             </p>
           </div>
