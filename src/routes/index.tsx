@@ -271,27 +271,27 @@ function Index() {
       </section>
 
       {/* MÓDULOS */}
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-5">
-          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
             6 módulos, do zero ao atendimento premium
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-muted-foreground">
+          <p className="mx-auto mt-3 max-w-xl text-center text-xs text-muted-foreground sm:text-sm">
             Direto ao ponto: cada módulo resolve um problema que hoje te faz perder cliente e
             dinheiro.
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {modulos.map(([n, titulo, desc]) => (
-              <div key={n} className="rounded-2xl border border-border bg-card p-6">
+              <div key={n} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
                 <span className="font-display text-2xl font-bold text-gold">{n}</span>
                 <h3 className="mt-3 text-sm font-semibold">{titulo}</h3>
                 <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
-          <div className="mx-auto mt-10 max-w-md">
+          <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero dominar as 6 técnicas</CtaButton>
-            <p className="mt-3 text-center text-xs text-muted-foreground">
+            <p className="mt-3 text-center text-[11px] text-muted-foreground">
               Garantia de 7 dias · Acesso imediato
             </p>
           </div>
@@ -299,11 +299,11 @@ function Index() {
       </section>
 
       {/* SEGREDOS + MENTORA */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 px-5 md:grid-cols-2">
+      <section className="bg-secondary/50 py-12 sm:py-16">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 px-4 sm:px-6 md:grid-cols-2">
           <div>
-            <h2 className="font-display text-xl font-bold sm:text-2xl">O que ninguém te conta</h2>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <h2 className="font-display text-lg font-bold sm:text-2xl">O que ninguém te conta</h2>
+            <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
               Os detalhes que separam quem cobra R$ 40 de quem cobra R$ 150 — e que nenhum tutorial
               gratuito mostra.
             </p>
@@ -327,13 +327,13 @@ function Index() {
             loading="lazy"
             width={912}
             height={1008}
-            className="rounded-3xl object-cover shadow-[var(--shadow-soft)]"
+            className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
           />
         </div>
 
-        <div className="mx-auto mt-14 max-w-3xl px-5">
-          <h2 className="font-display text-xl font-bold sm:text-2xl">Quem é Juliana Souza</h2>
-          <div className="mt-4 space-y-3 text-sm text-muted-foreground">
+        <div className="mx-auto mt-10 max-w-3xl px-4 sm:mt-14 sm:px-6">
+          <h2 className="font-display text-lg font-bold sm:text-2xl">Quem é Juliana Souza</h2>
+          <div className="mt-4 space-y-3 text-xs text-muted-foreground sm:text-sm">
             <p>
               Sou Juliana Souza, nail designer desde 2011. Me especializei em alongamento em gel e
               fibra porque é ali que a maioria erra — e onde está o maior ticket.
@@ -347,14 +347,14 @@ function Index() {
               tentativa e erro.
             </p>
           </div>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
               ["+2.147", "alunas ativas"],
               ["4,9/5", "nota das alunas"],
               ["97%", "concluem o curso"],
               ["+14 anos", "de experiência"],
             ].map(([v, l]) => (
-              <div key={l} className="rounded-2xl bg-card p-4 text-center">
+              <div key={l} className="rounded-2xl bg-card p-3 text-center sm:p-4">
                 <div className="font-display text-xl font-bold text-gold">{v}</div>
                 <div className="text-[11px] text-muted-foreground">{l}</div>
               </div>
