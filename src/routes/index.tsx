@@ -3,14 +3,15 @@ import { Check, X, Star, Clock, Flame, ShieldCheck, Lock, Sparkles } from "lucid
 
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
-import heroImg from "@/assets/hero-mentora.jpg";
-import retratoImg from "@/assets/mentora-retrato.jpg";
-import unhas1 from "@/assets/unhas-1.jpg";
-import unhas2 from "@/assets/unhas-2.jpg";
-import unhas3 from "@/assets/unhas-3.jpg";
-import unhas4 from "@/assets/unhas-4.jpg";
-import unhas5 from "@/assets/unhas-5.jpg";
-import unhas6 from "@/assets/unhas-6.jpg";
+import { SalesNotification } from "@/components/SalesNotification";
+import heroImg from "@/assets/hero-mentora.webp";
+import retratoImg from "@/assets/mentora-retrato.webp";
+import unhas1 from "@/assets/unhas-1.webp";
+import unhas2 from "@/assets/unhas-2.webp";
+import unhas3 from "@/assets/unhas-3.webp";
+import unhas4 from "@/assets/unhas-4.webp";
+import unhas5 from "@/assets/unhas-5.webp";
+import unhas6 from "@/assets/unhas-6.webp";
 
 const TITLE = "Curso de Unhas em Gel — Método Juliana Souza";
 const DESC =
@@ -74,25 +75,20 @@ const faq = [
 function Index() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
-      {/* Prova social flutuante */}
-      <div className="bg-cocoa px-4 py-2 text-center text-[11px] leading-snug text-background/90">
-        Camila S. acabou de comprar · São Paulo, SP · há 2 minutos
-      </div>
-
       {/* HERO */}
       <section className="relative" style={{ background: "var(--gradient-soft)" }}>
         <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:py-20">
           <div>
             <h1 className="font-display text-[26px] leading-[1.15] font-bold tracking-tight sm:text-4xl">
-              Faça unhas em gel de <span className="text-gold">alto padrão</span> e cobre até 3x
-              mais em cada atendimento
+              Aprenda a fazer unhas em gel que <span className="text-gold">duram 30 dias</span> e
+              cobre até 3x mais por atendimento
             </h1>
             <div className="relative mt-6">
               <img
                 src={heroImg}
                 alt="Nail designer aplicando alongamento em gel em uma cliente"
-                width={912}
-                height={1104}
+                width={743}
+                height={900}
                 fetchPriority="high"
                 className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
               />
@@ -113,8 +109,8 @@ function Index() {
               NAIL DESIGNER · ESPECIALISTA EM ALONGAMENTOS EM GEL E FIBRA
             </p>
             <p className="mt-4 text-sm sm:text-base">
-              O passo a passo completo para fazer alongamento que dura 30 dias, encher a agenda e
-              viver da unha — mesmo começando do zero, em casa.
+              Passo a passo em vídeo para você largar o preço baixo, encher a agenda e viver da
+              unha — começando do zero, em casa, com um kit simples.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
@@ -138,7 +134,7 @@ function Index() {
                     key={g.alt}
                     src={g.src}
                     alt={g.alt}
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                     width={700}
                     height={700}
                     className="size-10 rounded-full border-2 border-background object-cover"
@@ -185,7 +181,7 @@ function Index() {
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero começar por R$ 27,90</CtaButton>
+              <CtaButton>Quero aprender por R$ 27,90</CtaButton>
             </div>
             <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-muted-foreground">
               <span>✓ ACESSO IMEDIATO</span>
@@ -200,7 +196,7 @@ function Index() {
       {/* GALERIA */}
       <section className="py-10 sm:py-14">
         <h2 className="px-4 text-center font-display text-lg font-bold sm:text-2xl">
-          Resultados que fazem a cliente indicar você
+          O tipo de trabalho que faz a cliente indicar você
         </h2>
         <div className="mt-6 overflow-hidden sm:mt-8">
           <div className="flex w-max animate-marquee gap-3 sm:gap-4">
@@ -209,7 +205,7 @@ function Index() {
                 key={i}
                 src={g.src}
                 alt={g.alt}
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={700}
                 height={700}
                 className="size-32 rounded-xl object-cover sm:size-52 sm:rounded-2xl"
@@ -226,7 +222,7 @@ function Index() {
             A VIRADA DE CHAVE
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            O que muda quando você domina o método
+            A diferença entre cobrar R$ 40 e cobrar R$ 150
           </h2>
           <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-5 text-left sm:p-6">
@@ -290,7 +286,7 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero dominar as 6 técnicas</CtaButton>
+            <CtaButton>Quero as 6 técnicas por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
               Garantia de 7 dias · Acesso imediato
             </p>
@@ -324,9 +320,9 @@ function Index() {
           <img
             src={retratoImg}
             alt="Retrato de Juliana Souza em seu estúdio de nail design"
-            loading="lazy"
-            width={912}
-            height={1008}
+            loading="lazy" decoding="async"
+            width={814}
+            height={900}
             className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
           />
         </div>
@@ -385,9 +381,9 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero esse resultado também</CtaButton>
+            <CtaButton>Quero esse resultado por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              +2.000 alunas já valorizaram o próprio trabalho
+              +2.000 alunas já cobram mais pelo próprio trabalho
             </p>
           </div>
         </div>
@@ -463,7 +459,7 @@ function Index() {
             OFERTA DE LANÇAMENTO
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Menos que um esmalte. Um atendimento já paga o curso.
+            Menos que um esmalte. O primeiro atendimento já paga o curso.
           </h2>
           <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
@@ -552,6 +548,8 @@ function Index() {
       <footer className="bg-cocoa px-4 pb-24 pt-8 text-center text-[11px] text-background/70 sm:pb-8">
         Método Juliana Souza · Todos os direitos reservados
       </footer>
+
+      <SalesNotification />
 
       {/* CTA fixo mobile */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 px-4 py-3 backdrop-blur md:hidden">
