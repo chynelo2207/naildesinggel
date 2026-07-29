@@ -321,7 +321,7 @@ function Index() {
             src={retratoImg}
             alt="Retrato de Juliana Souza em seu estúdio de nail design"
             loading="lazy" decoding="async"
-            width={743}
+            width={814}
             height={900}
             className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
           />
