@@ -457,23 +457,25 @@ function Index() {
       </section>
 
       {/* OFERTA */}
-      <section id="oferta" className="py-16" style={{ background: "var(--gradient-soft)" }}>
-        <div className="mx-auto max-w-2xl px-5 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">OFERTA DE LANÇAMENTO</p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+      <section id="oferta" className="py-12 sm:py-16" style={{ background: "var(--gradient-soft)" }}>
+        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
+            OFERTA DE LANÇAMENTO
+          </p>
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
             Menos que um esmalte. Um atendimento já paga o curso.
           </h2>
-          <div className="mt-8 rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-soft)]">
+          <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
               Curso Completo de Unhas em Gel — Método Juliana Souza
             </p>
             <p className="mt-4 text-xs text-muted-foreground line-through">De R$ 1.025</p>
-            <p className="font-display text-4xl font-bold text-rose-deep">R$ 27,90</p>
+            <p className="font-display text-3xl font-bold text-rose-deep sm:text-4xl">R$ 27,90</p>
             <p className="mt-1 text-[11px] text-muted-foreground">
               pagamento único · acesso vitalício · sem mensalidade
             </p>
 
-            <ul className="mt-7 space-y-2.5 text-left text-xs">
+            <ul className="mt-6 space-y-2.5 text-left text-[11px] sm:text-xs">
               {[
                 ["6 módulos com técnicas completas", "R$ 497"],
                 ["Aulas de encapsulado e nail art", "incluso"],
@@ -482,8 +484,11 @@ function Index() {
                 ["Kit de posts para Instagram", "R$ 87"],
                 ["Grupo VIP de alunas + certificado", "R$ 197"],
               ].map(([item, valor]) => (
-                <li key={item} className="flex items-center justify-between gap-3 border-b border-border pb-2">
-                  <span className="flex gap-2">
+                <li
+                  key={item}
+                  className="flex items-center justify-between gap-3 border-b border-border pb-2"
+                >
+                  <span className="flex min-w-0 gap-2 text-left">
                     <Check className="size-4 shrink-0 text-rose-deep" />
                     {item}
                   </span>
@@ -510,14 +515,14 @@ function Index() {
       </section>
 
       {/* GARANTIA */}
-      <section className="py-16">
-        <div className="mx-auto max-w-2xl px-5 text-center">
-          <ShieldCheck className="mx-auto size-12 text-gold" />
-          <p className="mt-4 text-xs font-semibold tracking-[0.2em] text-rose-deep">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
+          <ShieldCheck className="mx-auto size-10 text-gold sm:size-12" />
+          <p className="mt-4 text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
             7 DIAS DE GARANTIA — RISCO ZERO
           </p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">O risco é todo meu</h2>
-          <p className="mt-3 text-sm text-muted-foreground">
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">O risco é todo meu</h2>
+          <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
             Teste por 7 dias. Se não fizer sentido para você, devolvo 100% do valor — sem perguntas
             e sem burocracia.
           </p>
@@ -525,28 +530,39 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto max-w-2xl px-5">
-          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="bg-secondary/50 py-12 pb-24 sm:py-16 sm:pb-16">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
             Perguntas frequentes
           </h2>
-          <div className="mt-8 space-y-3">
+          <div className="mt-6 space-y-3 sm:mt-8">
             {faq.map(([q, a]) => (
-              <details key={q} className="rounded-2xl border border-border bg-card p-5">
+              <details key={q} className="rounded-2xl border border-border bg-card p-4 sm:p-5">
                 <summary className="cursor-pointer list-none text-sm font-semibold">{q}</summary>
                 <p className="mt-3 text-xs text-muted-foreground">{a}</p>
               </details>
             ))}
           </div>
-          <div className="mx-auto mt-10 max-w-md">
+          <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
           </div>
         </div>
       </section>
 
-      <footer className="bg-cocoa py-8 text-center text-xs text-background/70">
+      <footer className="bg-cocoa px-4 pb-24 pt-8 text-center text-[11px] text-background/70 sm:pb-8">
         Método Juliana Souza · Todos os direitos reservados
       </footer>
+
+      {/* CTA fixo mobile */}
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 px-4 py-3 backdrop-blur md:hidden">
+        <div className="flex items-center gap-3">
+          <div className="min-w-0">
+            <p className="text-[10px] text-muted-foreground line-through">R$ 1.025</p>
+            <p className="font-display text-base font-bold leading-none text-rose-deep">R$ 27,90</p>
+          </div>
+          <CtaButton className="flex-1">Quero agora</CtaButton>
+        </div>
+      </div>
     </main>
   );
 }
