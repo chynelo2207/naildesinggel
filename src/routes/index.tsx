@@ -364,14 +364,14 @@ function Index() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-5">
-          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
             4,9 de 5 · o que dizem as alunas
           </h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
             {depoimentos.map(([texto, autor]) => (
-              <figure key={autor} className="rounded-2xl border border-border bg-card p-6">
+              <figure key={autor} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="size-4 fill-gold text-gold" />
@@ -384,7 +384,7 @@ function Index() {
               </figure>
             ))}
           </div>
-          <div className="mx-auto mt-10 max-w-md">
+          <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero esse resultado também</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
               +2.000 alunas já valorizaram o próprio trabalho
@@ -394,20 +394,20 @@ function Index() {
       </section>
 
       {/* BÔNUS */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto max-w-5xl px-5 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">
+      <section className="bg-secondary/50 py-12 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
             BÔNUS EXCLUSIVOS DESTA TURMA
           </p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
             R$ 528 em bônus liberados hoje
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
+          <p className="mx-auto mt-3 max-w-xl text-xs text-muted-foreground sm:text-sm">
             Saem do ar quando a turma fechar. Entrando agora, você leva tudo sem pagar nada a mais.
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <div className="mt-6 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-5">
             {bonus.map(([valor, titulo, desc]) => (
-              <div key={titulo} className="rounded-2xl border border-border bg-card p-6 text-left">
+              <div key={titulo} className="rounded-2xl border border-border bg-card p-4 text-left sm:p-6">
                 <span className="rounded-full bg-primary px-3 py-1 text-[11px] font-semibold text-primary-foreground">
                   {valor}
                 </span>
@@ -420,9 +420,9 @@ function Index() {
       </section>
 
       {/* PARA QUEM É */}
-      <section className="py-16">
-        <div className="mx-auto grid max-w-4xl gap-5 px-5 md:grid-cols-2">
-          <div className="rounded-2xl border-2 border-primary bg-card p-6">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto grid max-w-4xl gap-4 px-4 sm:gap-5 sm:px-6 md:grid-cols-2">
+          <div className="rounded-2xl border-2 border-primary bg-card p-5 sm:p-6">
             <h2 className="font-display text-lg font-bold">É para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
@@ -438,7 +438,7 @@ function Index() {
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <div className="rounded-2xl border border-border bg-card p-5 sm:p-6">
             <h2 className="font-display text-lg font-bold">Não é para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
