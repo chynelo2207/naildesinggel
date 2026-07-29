@@ -6,12 +6,6 @@ import { CtaButton } from "@/components/CtaButton";
 import { SalesNotification } from "@/components/SalesNotification";
 import heroImg from "@/assets/hero-mentora.webp";
 import retratoImg from "@/assets/mentora-retrato.webp";
-import unhas1 from "@/assets/unhas-1.webp";
-import unhas2 from "@/assets/unhas-2.webp";
-import unhas3 from "@/assets/unhas-3.webp";
-import unhas4 from "@/assets/unhas-4.webp";
-import unhas5 from "@/assets/unhas-5.webp";
-import unhas6 from "@/assets/unhas-6.webp";
 import cliente1 from "@/assets/cliente-1.webp";
 import cliente2 from "@/assets/cliente-2.webp";
 import cliente3 from "@/assets/cliente-3.webp";
@@ -48,12 +42,6 @@ const galeria = [
   { src: cliente6, alt: "Unhas stiletto em verde pistache com acabamento espelhado" },
   { src: cliente7, alt: "Francesinha amarela com flor 3D e detalhe dourado" },
   { src: cliente8, alt: "Unhas amêndoa em amarelo baunilha com brilho glazed" },
-  { src: unhas1, alt: "Francesinha em unha de gel formato amêndoa" },
-  { src: unhas2, alt: "Unha encapsulada com flores secas e glitter" },
-  { src: unhas3, alt: "Nail art autoral com linhas douradas" },
-  { src: unhas4, alt: "Decoração 3D com pérolas e flores esculpidas" },
-  { src: unhas5, alt: "Efeito cromado rose gold em unhas de gel" },
-  { src: unhas6, alt: "Alongamento em gel sendo modelado com molde" },
 ];
 
 const modulos = [
