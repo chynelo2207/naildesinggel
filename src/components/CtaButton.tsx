@@ -6,7 +6,7 @@ export function CtaButton({ children, className = "" }: { children: React.ReactN
   return (
     <a
       href={CHECKOUT_URL}
-      className={`inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.02] ${className}`}
+      className={`inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground shadow-[var(--shadow-soft)] transition-transform hover:scale-[1.02] ${className}`}
     >
       {children}
       <ArrowRight className="size-4" />
