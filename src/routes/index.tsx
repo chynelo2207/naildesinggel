@@ -12,6 +12,14 @@ import unhas3 from "@/assets/unhas-3.webp";
 import unhas4 from "@/assets/unhas-4.webp";
 import unhas5 from "@/assets/unhas-5.webp";
 import unhas6 from "@/assets/unhas-6.webp";
+import cliente1 from "@/assets/cliente-1.webp";
+import cliente2 from "@/assets/cliente-2.webp";
+import cliente3 from "@/assets/cliente-3.webp";
+import cliente4 from "@/assets/cliente-4.webp";
+import cliente5 from "@/assets/cliente-5.webp";
+import cliente6 from "@/assets/cliente-6.webp";
+import cliente7 from "@/assets/cliente-7.webp";
+import cliente8 from "@/assets/cliente-8.webp";
 
 const TITLE = "Curso de Unhas em Gel — Método Juliana Souza";
 const DESC =
@@ -32,6 +40,14 @@ export const Route = createFileRoute("/")({
 });
 
 const galeria = [
+  { src: cliente1, alt: "Unhas amêndoa em gel nude cremoso com brilho espelhado" },
+  { src: cliente2, alt: "Unhas stiletto com degradê azul e verde neon" },
+  { src: cliente3, alt: "Unhas amêndoa com degradê pink e laranja" },
+  { src: cliente4, alt: "Nail art verde com efeito textura e brilho" },
+  { src: cliente5, alt: "Unhas longas com francesinha branca e efeito tartaruga" },
+  { src: cliente6, alt: "Unhas stiletto em verde pistache com acabamento espelhado" },
+  { src: cliente7, alt: "Francesinha amarela com flor 3D e detalhe dourado" },
+  { src: cliente8, alt: "Unhas amêndoa em amarelo baunilha com brilho glazed" },
   { src: unhas1, alt: "Francesinha em unha de gel formato amêndoa" },
   { src: unhas2, alt: "Unha encapsulada com flores secas e glitter" },
   { src: unhas3, alt: "Nail art autoral com linhas douradas" },
