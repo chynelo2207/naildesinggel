@@ -198,8 +198,8 @@ function Index() {
 
       {/* GALERIA */}
       <section className="py-14">
-        <h2 className="px-5 text-center font-display text-3xl font-bold">
-          Moldes, técnicas e unhas que apaixonam
+        <h2 className="px-5 text-center font-display text-xl font-bold sm:text-2xl">
+          Resultados que fazem a cliente indicar você
         </h2>
         <div className="mt-8 overflow-hidden">
           <div className="flex w-max animate-marquee gap-4">
@@ -211,7 +211,7 @@ function Index() {
                 loading="lazy"
                 width={700}
                 height={700}
-                className="size-56 rounded-2xl object-cover"
+                className="size-44 rounded-2xl object-cover sm:size-52"
               />
             ))}
           </div>
@@ -222,18 +222,18 @@ function Index() {
       <section className="bg-secondary/50 py-16">
         <div className="mx-auto max-w-4xl px-5 text-center">
           <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">A VIRADA DE CHAVE</p>
-          <h2 className="mt-2 font-display text-3xl font-bold">
+          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
             O que muda quando você domina o método
           </h2>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-6 text-left">
-              <p className="font-semibold text-muted-foreground">Sem o método</p>
-              <ul className="mt-4 space-y-3 text-sm">
+              <p className="text-sm font-semibold text-muted-foreground">Sem o método</p>
+              <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Unha descola em 1 semana",
-                  "Cobra R$ 40 e sai no prejuízo",
-                  "Medo de errar na cliente",
-                  "Depende de emprego fixo",
+                  "Unha descola em 1 semana e a cliente não volta",
+                  "Cobra R$ 40 e ainda sai no prejuízo",
+                  "Insegurança a cada mão nova",
+                  "Renda travada e agenda vazia",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <X className="size-4 shrink-0 text-muted-foreground" />
@@ -243,13 +243,13 @@ function Index() {
               </ul>
             </div>
             <div className="rounded-2xl border-2 border-primary bg-card p-6 text-left">
-              <p className="font-semibold text-rose-deep">Com o método</p>
-              <ul className="mt-4 space-y-3 text-sm">
+              <p className="text-sm font-semibold text-rose-deep">Com o método</p>
+              <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Trabalho que dura 25 a 30 dias",
-                  "Cobra R$ 150+ com agenda cheia",
+                  "Trabalho impecável que dura 30 dias",
+                  "R$ 150+ por atendimento, com agenda cheia",
                   "Segurança para atender qualquer mão",
-                  "Renda própria feita em casa",
+                  "Renda própria, feita em casa, no seu horário",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <Check className="size-4 shrink-0 text-rose-deep" />
@@ -259,11 +259,11 @@ function Index() {
               </ul>
             </div>
           </div>
-          <blockquote className="mx-auto mt-10 max-w-2xl text-xl italic">
+          <blockquote className="mx-auto mt-10 max-w-2xl text-base italic sm:text-lg">
             “Uma unha bem feita é cartão de visita. Quando o acabamento impressiona, a cliente
             volta e traz amiga.”
           </blockquote>
-          <p className="mt-2 text-sm tracking-widest text-muted-foreground">JULIANA SOUZA</p>
+          <p className="mt-2 text-[11px] tracking-widest text-muted-foreground">JULIANA SOUZA</p>
         </div>
       </section>
 
