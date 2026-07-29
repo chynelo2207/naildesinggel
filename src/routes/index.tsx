@@ -83,9 +83,9 @@ function Index() {
       <section className="relative" style={{ background: "var(--gradient-soft)" }}>
         <div className="mx-auto grid max-w-6xl items-start gap-10 px-5 py-14 lg:grid-cols-2 lg:py-20">
           <div>
-            <h1 className="font-display text-4xl leading-tight font-bold sm:text-5xl">
-              Crie unhas em gel de <span className="text-gold">Alto Padrão</span> com acabamento
-              de salão premium
+            <h1 className="font-display text-2xl leading-tight font-bold sm:text-4xl">
+              Faça unhas em gel de <span className="text-gold">alto padrão</span> e cobre até 3x
+              mais em cada atendimento
             </h1>
             <div className="relative mt-8">
               <img
@@ -111,12 +111,12 @@ function Index() {
             <p className="mt-2 text-xs tracking-[0.15em] text-muted-foreground">
               NAIL DESIGNER · ESPECIALISTA EM ALONGAMENTOS EM GEL E FIBRA
             </p>
-            <p className="mt-5 text-lg">
-              Pare de perder tempo com vídeo solto. Aprenda a técnica que dura mais, cobra mais e
-              não te deixa na mão.
+            <p className="mt-4 text-sm sm:text-base">
+              O passo a passo completo para fazer alongamento que dura 30 dias, encher a agenda e
+              viver da unha — mesmo começando do zero, em casa.
             </p>
 
-            <div className="mt-5 flex flex-wrap items-center gap-4 text-sm">
+            <div className="mt-4 flex flex-wrap items-center gap-4 text-xs">
               <span className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="size-4 fill-gold text-gold" />
@@ -144,22 +144,22 @@ function Index() {
                   />
                 ))}
               </div>
-              <p className="text-sm">
+              <p className="text-xs">
                 <strong>+2.000 manicures</strong>{" "}
                 <span className="text-muted-foreground">já dominam o método</span>
               </p>
             </div>
 
-            <ul className="mt-6 grid gap-2 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-2 sm:grid-cols-2">
               {[
                 "Método exclusivo Juliana Souza",
-                "Alongamento em gel e fibra",
-                "Acabamento de salão de luxo",
-                "Artes nas unhas (nail art)",
+                "Alongamento em gel e fibra que não descola",
+                "Acabamento nível salão de luxo",
+                "Nail art autoral que vende sozinha",
                 "Encapsulado e decoração 3D",
-                "Precificação e atendimento",
+                "Quanto cobrar para lucrar de verdade",
               ].map((t) => (
-                <li key={t} className="flex items-start gap-2 text-sm">
+                <li key={t} className="flex items-start gap-2 text-xs">
                   <Check className="mt-0.5 size-4 shrink-0 text-rose-deep" />
                   {t}
                 </li>
@@ -176,7 +176,7 @@ function Index() {
               <div className="mt-4 h-1.5 w-full overflow-hidden rounded-full bg-rose">
                 <div className="h-full w-[83%] rounded-full bg-primary" />
               </div>
-              <p className="mt-3 flex items-center gap-2 text-sm">
+              <p className="mt-3 flex items-center gap-2 text-xs">
                 <Flame className="size-4 text-gold" />
                 <strong>apenas 17 vagas</strong>
                 <span className="text-muted-foreground">restantes nesta turma</span>
@@ -184,7 +184,7 @@ function Index() {
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero criar minhas unhas</CtaButton>
+              <CtaButton>Quero começar por R$ 27,90</CtaButton>
             </div>
             <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-muted-foreground">
               <span>✓ ACESSO IMEDIATO</span>
