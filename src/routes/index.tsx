@@ -378,7 +378,7 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            4,9 de 5 · o que dizem as alunas
+            +2.147 alunas. Nota 4,9. Veja o que mudou para elas.
           </h2>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
             {depoimentos.map(([texto, autor]) => (
@@ -398,7 +398,7 @@ function Index() {
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero esse resultado por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              +2.000 alunas já cobram mais pelo próprio trabalho
+              Elas começaram exatamente onde você está hoje
             </p>
           </div>
         </div>
@@ -411,10 +411,10 @@ function Index() {
             BÔNUS EXCLUSIVOS DESTA TURMA
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            R$ 528 em bônus liberados hoje
+            Leve R$ 528 em bônus sem pagar R$ 1 a mais
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-xs text-muted-foreground sm:text-sm">
-            Saem do ar quando a turma fechar. Entrando agora, você leva tudo sem pagar nada a mais.
+            Eles saem do ar quando esta turma fechar. Quem entra hoje leva tudo.
           </p>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-5">
             {bonus.map(([valor, titulo, desc]) => (
@@ -437,10 +437,10 @@ function Index() {
             <h2 className="font-display text-lg font-bold">É para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
-                "Faz unha há tempo, mas cobra barato e quer valorizar o trabalho",
-                "Perde horas com tutorial solto e ainda erra o acabamento",
-                "Tem medo de estragar a unha da cliente e perder a confiança",
-                "Quer renda extra trabalhando em casa, no seu horário",
+                "Você faz unha bem, mas cobra barato e sabe disso",
+                "Já perdeu horas em tutorial solto e continuou errando o acabamento",
+                "Tem medo de estragar a mão da cliente e nunca mais vê-la",
+                "Quer sua própria renda, em casa, sem depender de patrão",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <Check className="size-4 shrink-0 text-rose-deep" />
@@ -453,8 +453,8 @@ function Index() {
             <h2 className="font-display text-lg font-bold">Não é para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
-                "Quer resultado sem praticar",
-                "Acredita em dinheiro fácil sem entregar qualidade",
+                "Quer resultado sem encostar em uma lixa",
+                "Procura dinheiro fácil sem entregar qualidade",
                 "Não vai assistir às aulas nem seguir o passo a passo",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
@@ -474,7 +474,7 @@ function Index() {
             OFERTA DE LANÇAMENTO
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Menos que um esmalte. O primeiro atendimento já paga o curso.
+            Custa menos que um esmalte. Uma única cliente já devolve o valor.
           </h2>
           <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
@@ -509,14 +509,14 @@ function Index() {
             </ul>
 
             <p className="mt-7 text-[11px] tracking-widest text-muted-foreground">
-              O PREÇO VOLTA PARA R$ 497 EM
+              O PREÇO VOLTA A R$ 497 EM
             </p>
             <div className="mt-3 flex justify-center">
               <Countdown compact />
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero acesso imediato por R$ 27,90</CtaButton>
+              <CtaButton>Quero minha vaga por R$ 27,90</CtaButton>
             </div>
             <p className="mt-3 flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
               <Lock className="size-3" /> Compra segura SSL · Acesso imediato
@@ -534,8 +534,8 @@ function Index() {
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">O risco é todo meu</h2>
           <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
-            Teste por 7 dias. Se não fizer sentido para você, devolvo 100% do valor — sem perguntas
-            e sem burocracia.
+            Entre, assista tudo e teste na prática. Se em 7 dias você achar que não vale, é só me
+            avisar: devolvo os R$ 27,90 integralmente, sem pergunta nenhuma.
           </p>
         </div>
       </section>
@@ -544,7 +544,7 @@ function Index() {
       <section className="bg-secondary/50 py-12 pb-24 sm:py-16 sm:pb-16">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            Perguntas frequentes
+            Ainda com dúvida? Respondo aqui.
           </h2>
           <div className="mt-6 space-y-3 sm:mt-8">
             {faq.map(([q, a]) => (
@@ -556,6 +556,9 @@ function Index() {
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
+            <p className="mt-3 text-center text-[11px] text-muted-foreground">
+              Amanhã você pode estar cobrando o dobro — ou exatamente o mesmo de hoje.
+            </p>
           </div>
         </div>
       </section>
