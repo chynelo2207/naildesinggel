@@ -45,12 +45,12 @@ const galeria = [
 ];
 
 const modulos = [
-  ["01", "Gel na unha natural", "Preparo rápido, sem levantar. Aplicação impecável em menos tempo."],
-  ["02", "Alongamento gel e fibra", "Molde perfeito, formato certo e unha que não quebra."],
-  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto — o que a cliente pede, você entrega."],
-  ["04", "Nail art de salão", "Acabamentos autorais que fazem a cliente voltar e indicar."],
-  ["05", "Encapsulado 3D", "Técnicas criativas para cobrar mais pelo mesmo tempo."],
-  ["06", "Venda o seu atendimento", "Precificação, agenda cheia e cliente fiel desde o primeiro atendimento."],
+  ["01", "Gel na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta."],
+  ["02", "Alongamento gel e fibra", "Molde certo na primeira tentativa. Unha firme, leve e sem quebrar."],
+  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto: a cliente mostra a foto e você entrega igual."],
+  ["04", "Nail art de salão", "O acabamento que vira story da cliente e traz amiga sem você pedir."],
+  ["05", "Encapsulado 3D", "O serviço mais caro da tabela, feito no mesmo tempo do básico."],
+  ["06", "Venda o seu atendimento", "Como subir o preço e a cliente agradecer. Agenda cheia sem anúncio."],
 ];
 
 const depoimentos = [
@@ -63,17 +63,18 @@ const depoimentos = [
 ];
 
 const bonus = [
-  ["R$ 97 grátis", "Lista de Fornecedores", "Onde comprar gel, primer e ferramentas pagando menos e sem risco."],
-  ["R$ 147 grátis", "Tabela de Preços Pronta", "Quanto cobrar em cada serviço para lucrar desde a primeira cliente."],
-  ["R$ 87 grátis", "Kit de Posts para Instagram", "30 artes editáveis + legendas para atrair clientes sem pagar anúncio."],
-  ["R$ 197 grátis", "Grupo VIP de Alunas", "Suporte direto, correção de trabalhos e networking com quem já vive da unha."],
+  ["R$ 97 grátis", "Lista de Fornecedores", "Pare de queimar dinheiro com material ruim: compre o que eu compro, pelo menor preço."],
+  ["R$ 147 grátis", "Tabela de Preços Pronta", "É só copiar. Quanto cobrar em cada serviço para lucrar já na primeira cliente."],
+  ["R$ 87 grátis", "Kit de Posts para Instagram", "30 artes + legendas prontas. Poste hoje e comece a receber mensagem de cliente."],
+  ["R$ 197 grátis", "Grupo VIP de Alunas", "Manda foto do seu trabalho e eu corrijo. Você nunca fica travada sozinha."],
 ];
 
 const faq = [
-  ["Preciso saber fazer unhas?", "Se você tem noções básicas de manicure, consegue acompanhar. O método é passo a passo."],
-  ["Como recebo o acesso?", "Assim que o pagamento é confirmado, o acesso chega no seu e-mail. É imediato e vitalício."],
-  ["Quais materiais preciso?", "Um kit básico de gel, primer, cabine e moldes. A lista de fornecedores mostra onde comprar barato."],
-  ["Terei suporte?", "Sim. Você entra no grupo VIP de alunas, com correção de trabalhos e tira-dúvidas."],
+  ["Nunca fiz alongamento. Consigo?", "Sim. Começa do zero, com a câmera em cima da mão, cada movimento explicado. Alunas fazem a primeira unha ainda na primeira semana."],
+  ["Quando eu recebo?", "Na hora. Pagou, o acesso cai no seu e-mail em minutos — e é vitalício, sem mensalidade."],
+  ["Preciso de muito material?", "Não. Um kit básico resolve, e a lista de fornecedores mostra onde comprar pagando bem menos."],
+  ["E se eu travar no meio?", "Você manda foto no grupo VIP e eu mesma corrijo. Ninguém fica sozinha."],
+  ["E se eu não gostar?", "Você tem 7 dias para pedir o dinheiro de volta. Sem pergunta, sem burocracia. O risco é meu."],
 ];
 
 function Index() {
@@ -84,8 +85,8 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:py-20">
           <div>
             <h1 className="font-display text-[26px] leading-[1.15] font-bold tracking-tight sm:text-4xl">
-              Aprenda a fazer unhas em gel que <span className="text-gold">duram 30 dias</span> e
-              cobre até 3x mais por atendimento
+              Faça unhas em gel que <span className="text-gold">duram 30 dias</span> — e cobre 3x
+              mais já no próximo atendimento
             </h1>
             <div className="relative mt-6">
               <img
@@ -110,7 +111,8 @@ function Index() {
               MÉTODO JULIANA SOUZA
             </p>
             <p className="mt-3 text-sm sm:text-base">
-              Passo a passo em vídeo para começar do zero, em casa, com um kit simples.
+              Do zero, em casa, com um kit simples. O passo a passo que já colocou +2.000 manicures
+              cobrando preço de salão.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
@@ -145,9 +147,9 @@ function Index() {
 
             <ul className="mt-5 grid gap-2 sm:grid-cols-2">
               {[
-                "Alongamento em gel e fibra que não descola",
-                "Acabamento nível salão de luxo",
-                "Quanto cobrar para lucrar de verdade",
+                "Alongamento que não descola nem na cliente mais difícil",
+                "Acabamento de salão premium desde a primeira mão",
+                "A tabela de preços que faz a cliente pagar mais",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2 text-xs">
                   <Check className="mt-0.5 size-4 shrink-0 text-rose-deep" />
@@ -158,7 +160,7 @@ function Index() {
 
             <div className="mt-6 rounded-2xl border border-border bg-card p-4 sm:p-5">
               <p className="flex items-center gap-2 text-[11px] font-semibold tracking-widest text-gold sm:text-xs">
-                <Clock className="size-4 shrink-0" /> A OFERTA DE 70% OFF EXPIRA EM
+                <Clock className="size-4 shrink-0" /> 97% DE DESCONTO — EXPIRA EM
               </p>
               <div className="mt-3">
                 <Countdown />
@@ -168,13 +170,13 @@ function Index() {
               </div>
               <p className="mt-3 flex items-center gap-2 text-xs">
                 <Flame className="size-4 text-gold" />
-                <strong>apenas 17 vagas</strong>
-                <span className="text-muted-foreground">restantes nesta turma</span>
+                <strong>restam 17 vagas</strong>
+                <span className="text-muted-foreground">nesta turma</span>
               </p>
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero aprender por R$ 27,90</CtaButton>
+              <CtaButton>Quero começar agora</CtaButton>
             </div>
             <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-muted-foreground">
               <span>✓ ACESSO IMEDIATO</span>
@@ -187,7 +189,7 @@ function Index() {
       {/* GALERIA */}
       <section className="py-10 sm:py-14">
         <h2 className="px-4 text-center font-display text-lg font-bold sm:text-2xl">
-          O tipo de trabalho que faz a cliente indicar você
+          Esse é o trabalho que faz a cliente pagar sem perguntar o preço
         </h2>
         <div className="mt-6 overflow-hidden sm:mt-8">
           <div className="flex w-max animate-marquee gap-3 sm:gap-4">
@@ -213,17 +215,17 @@ function Index() {
             A VIRADA DE CHAVE
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            A diferença entre cobrar R$ 40 e cobrar R$ 150
+            A mesma hora de trabalho. R$ 40 ou R$ 150 na sua mão.
           </h2>
           <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-5 text-left sm:p-6">
               <p className="text-sm font-semibold text-muted-foreground">Sem o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Unha descola em 1 semana e a cliente não volta",
-                  "Cobra R$ 40 e ainda sai no prejuízo",
-                  "Insegurança a cada mão nova",
-                  "Renda travada e agenda vazia",
+                  "Descola em 1 semana e a cliente some sem avisar",
+                  "Cobra R$ 40, gasta material e ainda sai no prejuízo",
+                  "Frio na barriga cada vez que chega uma mão difícil",
+                  "Agenda vazia e sempre esperando o mês virar",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <X className="size-4 shrink-0 text-muted-foreground" />
@@ -236,10 +238,10 @@ function Index() {
               <p className="text-sm font-semibold text-rose-deep">Com o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Trabalho impecável que dura 30 dias",
-                  "R$ 150+ por atendimento, com agenda cheia",
-                  "Segurança para atender qualquer mão",
-                  "Renda própria, feita em casa, no seu horário",
+                  "Unha impecável que aguenta 30 dias de rotina real",
+                  "R$ 150+ por atendimento e agenda cheia de indicação",
+                  "Confiança para atender qualquer mão sem medo",
+                  "Sua própria renda, em casa, no seu horário",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <Check className="size-4 shrink-0 text-rose-deep" />
@@ -261,11 +263,10 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            6 módulos, do zero ao atendimento premium
+            6 módulos: do zero ao atendimento de R$ 150
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-xs text-muted-foreground sm:text-sm">
-            Direto ao ponto: cada módulo resolve um problema que hoje te faz perder cliente e
-            dinheiro.
+            Sem enrolação. Cada módulo mata um erro que hoje te faz perder cliente e dinheiro.
           </p>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {modulos.map(([n, titulo, desc]) => (
@@ -277,9 +278,9 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero as 6 técnicas por R$ 27,90</CtaButton>
+            <CtaButton>Quero dominar as 6 técnicas por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              Garantia de 7 dias · Acesso imediato
+              Acesso imediato · 7 dias de garantia · risco zero
             </p>
           </div>
         </div>
@@ -289,17 +290,19 @@ function Index() {
       <section className="bg-secondary/50 py-12 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div>
-            <h2 className="font-display text-lg font-bold sm:text-2xl">O que ninguém te conta</h2>
+            <h2 className="font-display text-lg font-bold sm:text-2xl">
+              O que nenhum tutorial grátis te mostra
+            </h2>
             <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
-              Os detalhes que separam quem cobra R$ 40 de quem cobra R$ 150 — e que nenhum tutorial
-              gratuito mostra.
+              São 4 detalhes. Eles decidem se a sua unha dura 7 ou 30 dias — e quanto você pode
+              cobrar por ela.
             </p>
             <ul className="mt-6 space-y-2.5 text-xs">
               {[
-                "Preparo que evita levantamento em qualquer formato",
-                "Escolha de gel e primer para cada tipo de unha",
-                "Acabamento de salão em menos tempo",
-                "Como cobrar mais sem perder cliente",
+                "O preparo que trava o levantamento em qualquer formato",
+                "O gel e o primer certos para cada tipo de unha",
+                "Acabamento de salão gastando menos tempo por mão",
+                "Como subir o preço sem perder nenhuma cliente",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <Sparkles className="size-4 shrink-0 text-gold" />
@@ -375,7 +378,7 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            4,9 de 5 · o que dizem as alunas
+            +2.147 alunas. Nota 4,9. Veja o que mudou para elas.
           </h2>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
             {depoimentos.map(([texto, autor]) => (
@@ -395,7 +398,7 @@ function Index() {
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero esse resultado por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              +2.000 alunas já cobram mais pelo próprio trabalho
+              Elas começaram exatamente onde você está hoje
             </p>
           </div>
         </div>
@@ -408,10 +411,10 @@ function Index() {
             BÔNUS EXCLUSIVOS DESTA TURMA
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            R$ 528 em bônus liberados hoje
+            Leve R$ 528 em bônus sem pagar R$ 1 a mais
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-xs text-muted-foreground sm:text-sm">
-            Saem do ar quando a turma fechar. Entrando agora, você leva tudo sem pagar nada a mais.
+            Eles saem do ar quando esta turma fechar. Quem entra hoje leva tudo.
           </p>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-5">
             {bonus.map(([valor, titulo, desc]) => (
@@ -434,10 +437,10 @@ function Index() {
             <h2 className="font-display text-lg font-bold">É para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
-                "Faz unha há tempo, mas cobra barato e quer valorizar o trabalho",
-                "Perde horas com tutorial solto e ainda erra o acabamento",
-                "Tem medo de estragar a unha da cliente e perder a confiança",
-                "Quer renda extra trabalhando em casa, no seu horário",
+                "Você faz unha bem, mas cobra barato e sabe disso",
+                "Já perdeu horas em tutorial solto e continuou errando o acabamento",
+                "Tem medo de estragar a mão da cliente e nunca mais vê-la",
+                "Quer sua própria renda, em casa, sem depender de patrão",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <Check className="size-4 shrink-0 text-rose-deep" />
@@ -450,8 +453,8 @@ function Index() {
             <h2 className="font-display text-lg font-bold">Não é para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
-                "Quer resultado sem praticar",
-                "Acredita em dinheiro fácil sem entregar qualidade",
+                "Quer resultado sem encostar em uma lixa",
+                "Procura dinheiro fácil sem entregar qualidade",
                 "Não vai assistir às aulas nem seguir o passo a passo",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
@@ -471,7 +474,7 @@ function Index() {
             OFERTA DE LANÇAMENTO
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Menos que um esmalte. O primeiro atendimento já paga o curso.
+            Custa menos que um esmalte. Uma única cliente já devolve o valor.
           </h2>
           <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
@@ -506,14 +509,14 @@ function Index() {
             </ul>
 
             <p className="mt-7 text-[11px] tracking-widest text-muted-foreground">
-              O PREÇO VOLTA PARA R$ 497 EM
+              O PREÇO VOLTA A R$ 497 EM
             </p>
             <div className="mt-3 flex justify-center">
               <Countdown compact />
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero acesso imediato por R$ 27,90</CtaButton>
+              <CtaButton>Quero minha vaga por R$ 27,90</CtaButton>
             </div>
             <p className="mt-3 flex items-center justify-center gap-2 text-[11px] text-muted-foreground">
               <Lock className="size-3" /> Compra segura SSL · Acesso imediato
@@ -531,8 +534,8 @@ function Index() {
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">O risco é todo meu</h2>
           <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
-            Teste por 7 dias. Se não fizer sentido para você, devolvo 100% do valor — sem perguntas
-            e sem burocracia.
+            Entre, assista tudo e teste na prática. Se em 7 dias você achar que não vale, é só me
+            avisar: devolvo os R$ 27,90 integralmente, sem pergunta nenhuma.
           </p>
         </div>
       </section>
@@ -541,7 +544,7 @@ function Index() {
       <section className="bg-secondary/50 py-12 pb-24 sm:py-16 sm:pb-16">
         <div className="mx-auto max-w-2xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            Perguntas frequentes
+            Ainda com dúvida? Respondo aqui.
           </h2>
           <div className="mt-6 space-y-3 sm:mt-8">
             {faq.map(([q, a]) => (
@@ -553,6 +556,9 @@ function Index() {
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
+            <p className="mt-3 text-center text-[11px] text-muted-foreground">
+              Amanhã você pode estar cobrando o dobro — ou exatamente o mesmo de hoje.
+            </p>
           </div>
         </div>
       </section>
