@@ -296,7 +296,7 @@ function Index() {
 
       {/* SEGREDOS + MENTORA */}
       <section className="bg-secondary/50 py-12 sm:py-16">
-        <div className="mx-auto grid max-w-5xl items-center gap-8 px-4 sm:px-6 md:grid-cols-2">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div>
             <h2 className="font-display text-lg font-bold sm:text-2xl">O que ninguém te conta</h2>
             <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
@@ -317,33 +317,54 @@ function Index() {
               ))}
             </ul>
           </div>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-5xl items-center gap-6 px-4 sm:mt-14 sm:gap-8 sm:px-6 md:grid-cols-2">
           <img
             src={retratoImg}
             alt="Retrato de Juliana Souza em seu estúdio de nail design"
-            loading="lazy" decoding="async"
+            loading="lazy"
+            decoding="async"
             width={814}
             height={900}
-            className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
+            className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:rounded-3xl"
           />
+          <div>
+            <h2 className="font-display text-lg font-bold sm:text-2xl">Quem é Juliana Souza</h2>
+            <div className="mt-4 space-y-3 text-xs text-muted-foreground sm:text-sm">
+              <p>
+                Sou Juliana Souza, Nail Designer desde 2011. Especializei em alongamentos em gel e
+                fibra porque vi que era ali que a maioria errava — e onde dava para cobrar mais.
+              </p>
+              <p>
+                Hoje levo técnicas internacionais para um acabamento de requinte. Atendo clientes de
+                referência dentro e fora do Brasil.
+              </p>
+              <p>
+                Criei este método para quem quer aprender de verdade, sem perder tempo, e começar a
+                faturar com a unha.
+              </p>
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {[
+                "Desde 2011",
+                "Clientes de referência",
+                "Atendimento internacional",
+                "Método Juliana Souza",
+              ].map((t) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-border bg-card px-3 py-1 text-[10px] font-semibold tracking-wide text-muted-foreground"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <div className="mx-auto mt-10 max-w-3xl px-4 sm:mt-14 sm:px-6">
-          <h2 className="font-display text-lg font-bold sm:text-2xl">Quem é Juliana Souza</h2>
-          <div className="mt-4 space-y-3 text-xs text-muted-foreground sm:text-sm">
-            <p>
-              Sou Juliana Souza, nail designer desde 2011. Me especializei em alongamento em gel e
-              fibra porque é ali que a maioria erra — e onde está o maior ticket.
-            </p>
-            <p>
-              Já formei mais de 2.000 alunas que hoje vivem da unha, muitas saindo do zero e
-              lotando a agenda em poucas semanas.
-            </p>
-            <p>
-              Coloquei tudo o que aprendi em 14 anos neste método, para você pular a fase de
-              tentativa e erro.
-            </p>
-          </div>
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+        <div className="mx-auto mt-8 max-w-5xl px-4 sm:px-6">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
               ["+2.147", "alunas ativas"],
               ["4,9/5", "nota das alunas"],
