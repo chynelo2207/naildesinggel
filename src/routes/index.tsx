@@ -189,7 +189,7 @@ function Index() {
       {/* GALERIA */}
       <section className="py-10 sm:py-14">
         <h2 className="px-4 text-center font-display text-lg font-bold sm:text-2xl">
-          O tipo de trabalho que faz a cliente indicar você
+          Esse é o trabalho que faz a cliente pagar sem perguntar o preço
         </h2>
         <div className="mt-6 overflow-hidden sm:mt-8">
           <div className="flex w-max animate-marquee gap-3 sm:gap-4">
@@ -215,17 +215,17 @@ function Index() {
             A VIRADA DE CHAVE
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            A diferença entre cobrar R$ 40 e cobrar R$ 150
+            A mesma hora de trabalho. R$ 40 ou R$ 150 na sua mão.
           </h2>
           <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-5 text-left sm:p-6">
               <p className="text-sm font-semibold text-muted-foreground">Sem o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Unha descola em 1 semana e a cliente não volta",
-                  "Cobra R$ 40 e ainda sai no prejuízo",
-                  "Insegurança a cada mão nova",
-                  "Renda travada e agenda vazia",
+                  "Descola em 1 semana e a cliente some sem avisar",
+                  "Cobra R$ 40, gasta material e ainda sai no prejuízo",
+                  "Frio na barriga cada vez que chega uma mão difícil",
+                  "Agenda vazia e sempre esperando o mês virar",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <X className="size-4 shrink-0 text-muted-foreground" />
@@ -238,10 +238,10 @@ function Index() {
               <p className="text-sm font-semibold text-rose-deep">Com o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Trabalho impecável que dura 30 dias",
-                  "R$ 150+ por atendimento, com agenda cheia",
-                  "Segurança para atender qualquer mão",
-                  "Renda própria, feita em casa, no seu horário",
+                  "Unha impecável que aguenta 30 dias de rotina real",
+                  "R$ 150+ por atendimento e agenda cheia de indicação",
+                  "Confiança para atender qualquer mão sem medo",
+                  "Sua própria renda, em casa, no seu horário",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <Check className="size-4 shrink-0 text-rose-deep" />
@@ -263,11 +263,10 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            6 módulos, do zero ao atendimento premium
+            6 módulos: do zero ao atendimento de R$ 150
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-xs text-muted-foreground sm:text-sm">
-            Direto ao ponto: cada módulo resolve um problema que hoje te faz perder cliente e
-            dinheiro.
+            Sem enrolação. Cada módulo mata um erro que hoje te faz perder cliente e dinheiro.
           </p>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {modulos.map(([n, titulo, desc]) => (
@@ -279,9 +278,9 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero as 6 técnicas por R$ 27,90</CtaButton>
+            <CtaButton>Quero dominar as 6 técnicas por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              Garantia de 7 dias · Acesso imediato
+              Acesso imediato · 7 dias de garantia · risco zero
             </p>
           </div>
         </div>
@@ -291,17 +290,19 @@ function Index() {
       <section className="bg-secondary/50 py-12 sm:py-16">
         <div className="mx-auto max-w-3xl px-4 sm:px-6">
           <div>
-            <h2 className="font-display text-lg font-bold sm:text-2xl">O que ninguém te conta</h2>
+            <h2 className="font-display text-lg font-bold sm:text-2xl">
+              O que nenhum tutorial grátis te mostra
+            </h2>
             <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
-              Os detalhes que separam quem cobra R$ 40 de quem cobra R$ 150 — e que nenhum tutorial
-              gratuito mostra.
+              São 4 detalhes. Eles decidem se a sua unha dura 7 ou 30 dias — e quanto você pode
+              cobrar por ela.
             </p>
             <ul className="mt-6 space-y-2.5 text-xs">
               {[
-                "Preparo que evita levantamento em qualquer formato",
-                "Escolha de gel e primer para cada tipo de unha",
-                "Acabamento de salão em menos tempo",
-                "Como cobrar mais sem perder cliente",
+                "O preparo que trava o levantamento em qualquer formato",
+                "O gel e o primer certos para cada tipo de unha",
+                "Acabamento de salão gastando menos tempo por mão",
+                "Como subir o preço sem perder nenhuma cliente",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <Sparkles className="size-4 shrink-0 text-gold" />
