@@ -270,21 +270,24 @@ function Index() {
       {/* MÓDULOS */}
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-5">
-          <h2 className="text-center font-display text-3xl font-bold">Módulos do curso</h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-muted-foreground">
-            6 etapas diretas. Do básico ao autoral, para você atender qualquer pedido com segurança.
+          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+            6 módulos, do zero ao atendimento premium
+          </h2>
+          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-muted-foreground">
+            Direto ao ponto: cada módulo resolve um problema que hoje te faz perder cliente e
+            dinheiro.
           </p>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {modulos.map(([n, titulo, desc]) => (
               <div key={n} className="rounded-2xl border border-border bg-card p-6">
-                <span className="font-display text-3xl font-bold text-gold">{n}</span>
-                <h3 className="mt-3 text-lg font-semibold">{titulo}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
+                <span className="font-display text-2xl font-bold text-gold">{n}</span>
+                <h3 className="mt-3 text-sm font-semibold">{titulo}</h3>
+                <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
           <div className="mx-auto mt-10 max-w-md">
-            <CtaButton>Quero aprender todas as técnicas</CtaButton>
+            <CtaButton>Quero dominar as 6 técnicas</CtaButton>
             <p className="mt-3 text-center text-xs text-muted-foreground">
               Garantia de 7 dias · Acesso imediato
             </p>
@@ -296,12 +299,12 @@ function Index() {
       <section className="bg-secondary/50 py-16">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-5 md:grid-cols-2">
           <div>
-            <h2 className="font-display text-3xl font-bold">O que ninguém te conta</h2>
-            <p className="mt-3 text-muted-foreground">
-              Segredos de quem vive da unha há anos. O tipo de detalhe que faz o trabalho durar e a
-              cliente voltar.
+            <h2 className="font-display text-xl font-bold sm:text-2xl">O que ninguém te conta</h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              Os detalhes que separam quem cobra R$ 40 de quem cobra R$ 150 — e que nenhum tutorial
+              gratuito mostra.
             </p>
-            <ul className="mt-6 space-y-3 text-sm">
+            <ul className="mt-6 space-y-2.5 text-xs">
               {[
                 "Preparo que evita levantamento em qualquer formato",
                 "Escolha de gel e primer para cada tipo de unha",
@@ -326,19 +329,19 @@ function Index() {
         </div>
 
         <div className="mx-auto mt-14 max-w-3xl px-5">
-          <h2 className="font-display text-3xl font-bold">Quem é Juliana Souza</h2>
-          <div className="mt-4 space-y-4 text-muted-foreground">
+          <h2 className="font-display text-xl font-bold sm:text-2xl">Quem é Juliana Souza</h2>
+          <div className="mt-4 space-y-3 text-sm text-muted-foreground">
             <p>
-              Sou Juliana Souza, Nail Designer desde 2011. Me especializei em alongamentos em gel e
-              fibra porque vi que era ali que a maioria errava — e onde dava para cobrar mais.
+              Sou Juliana Souza, nail designer desde 2011. Me especializei em alongamento em gel e
+              fibra porque é ali que a maioria erra — e onde está o maior ticket.
             </p>
             <p>
-              Hoje levo técnicas internacionais para um acabamento de requinte, atendendo clientes
-              de referência dentro e fora do Brasil.
+              Já formei mais de 2.000 alunas que hoje vivem da unha, muitas saindo do zero e
+              lotando a agenda em poucas semanas.
             </p>
             <p>
-              Criei este método para quem quer aprender de verdade, sem perder tempo, e começar a
-              faturar com a unha.
+              Coloquei tudo o que aprendeu em 14 anos neste método, para você pular a fase de
+              tentativa e erro.
             </p>
           </div>
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -349,8 +352,8 @@ function Index() {
               ["+14 anos", "de experiência"],
             ].map(([v, l]) => (
               <div key={l} className="rounded-2xl bg-card p-4 text-center">
-                <div className="font-display text-2xl font-bold text-gold">{v}</div>
-                <div className="text-xs text-muted-foreground">{l}</div>
+                <div className="font-display text-xl font-bold text-gold">{v}</div>
+                <div className="text-[11px] text-muted-foreground">{l}</div>
               </div>
             ))}
           </div>
