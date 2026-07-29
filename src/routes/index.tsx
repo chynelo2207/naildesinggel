@@ -45,12 +45,12 @@ const galeria = [
 ];
 
 const modulos = [
-  ["01", "Gel na unha natural", "Preparo rápido, sem levantar. Aplicação impecável em menos tempo."],
-  ["02", "Alongamento gel e fibra", "Molde perfeito, formato certo e unha que não quebra."],
-  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto — o que a cliente pede, você entrega."],
-  ["04", "Nail art de salão", "Acabamentos autorais que fazem a cliente voltar e indicar."],
-  ["05", "Encapsulado 3D", "Técnicas criativas para cobrar mais pelo mesmo tempo."],
-  ["06", "Venda o seu atendimento", "Precificação, agenda cheia e cliente fiel desde o primeiro atendimento."],
+  ["01", "Gel na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta."],
+  ["02", "Alongamento gel e fibra", "Molde certo na primeira tentativa. Unha firme, leve e sem quebrar."],
+  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto: a cliente mostra a foto e você entrega igual."],
+  ["04", "Nail art de salão", "O acabamento que vira story da cliente e traz amiga sem você pedir."],
+  ["05", "Encapsulado 3D", "O serviço mais caro da tabela, feito no mesmo tempo do básico."],
+  ["06", "Venda o seu atendimento", "Como subir o preço e a cliente agradecer. Agenda cheia sem anúncio."],
 ];
 
 const depoimentos = [
@@ -63,17 +63,18 @@ const depoimentos = [
 ];
 
 const bonus = [
-  ["R$ 97 grátis", "Lista de Fornecedores", "Onde comprar gel, primer e ferramentas pagando menos e sem risco."],
-  ["R$ 147 grátis", "Tabela de Preços Pronta", "Quanto cobrar em cada serviço para lucrar desde a primeira cliente."],
-  ["R$ 87 grátis", "Kit de Posts para Instagram", "30 artes editáveis + legendas para atrair clientes sem pagar anúncio."],
-  ["R$ 197 grátis", "Grupo VIP de Alunas", "Suporte direto, correção de trabalhos e networking com quem já vive da unha."],
+  ["R$ 97 grátis", "Lista de Fornecedores", "Pare de queimar dinheiro com material ruim: compre o que eu compro, pelo menor preço."],
+  ["R$ 147 grátis", "Tabela de Preços Pronta", "É só copiar. Quanto cobrar em cada serviço para lucrar já na primeira cliente."],
+  ["R$ 87 grátis", "Kit de Posts para Instagram", "30 artes + legendas prontas. Poste hoje e comece a receber mensagem de cliente."],
+  ["R$ 197 grátis", "Grupo VIP de Alunas", "Manda foto do seu trabalho e eu corrijo. Você nunca fica travada sozinha."],
 ];
 
 const faq = [
-  ["Preciso saber fazer unhas?", "Se você tem noções básicas de manicure, consegue acompanhar. O método é passo a passo."],
-  ["Como recebo o acesso?", "Assim que o pagamento é confirmado, o acesso chega no seu e-mail. É imediato e vitalício."],
-  ["Quais materiais preciso?", "Um kit básico de gel, primer, cabine e moldes. A lista de fornecedores mostra onde comprar barato."],
-  ["Terei suporte?", "Sim. Você entra no grupo VIP de alunas, com correção de trabalhos e tira-dúvidas."],
+  ["Nunca fiz alongamento. Consigo?", "Sim. Começa do zero, com a câmera em cima da mão, cada movimento explicado. Alunas fazem a primeira unha ainda na primeira semana."],
+  ["Quando eu recebo?", "Na hora. Pagou, o acesso cai no seu e-mail em minutos — e é vitalício, sem mensalidade."],
+  ["Preciso de muito material?", "Não. Um kit básico resolve, e a lista de fornecedores mostra onde comprar pagando bem menos."],
+  ["E se eu travar no meio?", "Você manda foto no grupo VIP e eu mesma corrijo. Ninguém fica sozinha."],
+  ["E se eu não gostar?", "Você tem 7 dias para pedir o dinheiro de volta. Sem pergunta, sem burocracia. O risco é meu."],
 ];
 
 function Index() {
