@@ -4,14 +4,14 @@ import { Check, X, Star, Clock, Flame, ShieldCheck, Lock, Sparkles } from "lucid
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
 import { SalesNotification } from "@/components/SalesNotification";
-import heroImg from "@/assets/hero-mentora.jpg";
-import retratoImg from "@/assets/mentora-retrato.jpg";
-import unhas1 from "@/assets/unhas-1.jpg";
-import unhas2 from "@/assets/unhas-2.jpg";
-import unhas3 from "@/assets/unhas-3.jpg";
-import unhas4 from "@/assets/unhas-4.jpg";
-import unhas5 from "@/assets/unhas-5.jpg";
-import unhas6 from "@/assets/unhas-6.jpg";
+import heroImg from "@/assets/hero-mentora.webp";
+import retratoImg from "@/assets/mentora-retrato.webp";
+import unhas1 from "@/assets/unhas-1.webp";
+import unhas2 from "@/assets/unhas-2.webp";
+import unhas3 from "@/assets/unhas-3.webp";
+import unhas4 from "@/assets/unhas-4.webp";
+import unhas5 from "@/assets/unhas-5.webp";
+import unhas6 from "@/assets/unhas-6.webp";
 
 const TITLE = "Curso de Unhas em Gel — Método Juliana Souza";
 const DESC =
