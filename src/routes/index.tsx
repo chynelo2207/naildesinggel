@@ -75,40 +75,41 @@ function Index() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
       {/* Prova social flutuante */}
-      <div className="bg-cocoa py-2 text-center text-xs text-background/90">
+      <div className="bg-cocoa px-4 py-2 text-center text-[11px] leading-snug text-background/90">
         Camila S. acabou de comprar · São Paulo, SP · há 2 minutos
       </div>
 
       {/* HERO */}
       <section className="relative" style={{ background: "var(--gradient-soft)" }}>
-        <div className="mx-auto grid max-w-6xl items-start gap-10 px-5 py-14 lg:grid-cols-2 lg:py-20">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:py-20">
           <div>
-            <h1 className="font-display text-2xl leading-tight font-bold sm:text-4xl">
+            <h1 className="font-display text-[26px] leading-[1.15] font-bold tracking-tight sm:text-4xl">
               Faça unhas em gel de <span className="text-gold">alto padrão</span> e cobre até 3x
               mais em cada atendimento
             </h1>
-            <div className="relative mt-8">
+            <div className="relative mt-6">
               <img
                 src={heroImg}
                 alt="Nail designer aplicando alongamento em gel em uma cliente"
                 width={912}
                 height={1104}
-                className="w-full rounded-3xl object-cover shadow-[var(--shadow-soft)]"
+                fetchPriority="high"
+                className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
               />
-              <div className="absolute -bottom-6 -left-4 rounded-2xl bg-card px-6 py-4 shadow-[var(--shadow-soft)]">
-                <div className="font-display text-3xl font-bold text-gold">6</div>
-                <div className="text-[11px] tracking-widest text-muted-foreground">
+              <div className="absolute -bottom-4 left-3 rounded-xl bg-card px-4 py-3 shadow-[var(--shadow-soft)] sm:-bottom-6 sm:-left-4 sm:rounded-2xl sm:px-6 sm:py-4">
+                <div className="font-display text-2xl font-bold text-gold sm:text-3xl">6</div>
+                <div className="text-[10px] tracking-widest text-muted-foreground sm:text-[11px]">
                   MÓDULOS COMPLETOS
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="pt-2 lg:pt-4">
-            <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">
+          <div className="pt-6 lg:pt-4">
+            <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep sm:text-xs">
               MÉTODO JULIANA SOUZA
             </p>
-            <p className="mt-2 text-xs tracking-[0.15em] text-muted-foreground">
+            <p className="mt-2 text-[10px] tracking-[0.15em] text-muted-foreground sm:text-xs">
               NAIL DESIGNER · ESPECIALISTA EM ALONGAMENTOS EM GEL E FIBRA
             </p>
             <p className="mt-4 text-sm sm:text-base">
@@ -116,7 +117,7 @@ function Index() {
               viver da unha — mesmo começando do zero, em casa.
             </p>
 
-            <div className="mt-4 flex flex-wrap items-center gap-4 text-xs">
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
               <span className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="size-4 fill-gold text-gold" />
@@ -166,9 +167,9 @@ function Index() {
               ))}
             </ul>
 
-            <div className="mt-7 rounded-2xl border border-border bg-card p-5">
-              <p className="flex items-center gap-2 text-xs font-semibold tracking-widest text-gold">
-                <Clock className="size-4" /> A OFERTA DE 70% OFF EXPIRA EM
+            <div className="mt-6 rounded-2xl border border-border bg-card p-4 sm:p-5">
+              <p className="flex items-center gap-2 text-[11px] font-semibold tracking-widest text-gold sm:text-xs">
+                <Clock className="size-4 shrink-0" /> A OFERTA DE 70% OFF EXPIRA EM
               </p>
               <div className="mt-3">
                 <Countdown />
@@ -197,12 +198,12 @@ function Index() {
       </section>
 
       {/* GALERIA */}
-      <section className="py-14">
-        <h2 className="px-5 text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="py-10 sm:py-14">
+        <h2 className="px-4 text-center font-display text-lg font-bold sm:text-2xl">
           Resultados que fazem a cliente indicar você
         </h2>
-        <div className="mt-8 overflow-hidden">
-          <div className="flex w-max animate-marquee gap-4">
+        <div className="mt-6 overflow-hidden sm:mt-8">
+          <div className="flex w-max animate-marquee gap-3 sm:gap-4">
             {[...galeria, ...galeria].map((g, i) => (
               <img
                 key={i}
@@ -211,7 +212,7 @@ function Index() {
                 loading="lazy"
                 width={700}
                 height={700}
-                className="size-44 rounded-2xl object-cover sm:size-52"
+                className="size-32 rounded-xl object-cover sm:size-52 sm:rounded-2xl"
               />
             ))}
           </div>
@@ -219,14 +220,16 @@ function Index() {
       </section>
 
       {/* ANTES / DEPOIS */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto max-w-4xl px-5 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">A VIRADA DE CHAVE</p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+      <section className="bg-secondary/50 py-12 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
+            A VIRADA DE CHAVE
+          </p>
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
             O que muda quando você domina o método
           </h2>
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            <div className="rounded-2xl border border-border bg-card p-6 text-left">
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
+            <div className="rounded-2xl border border-border bg-card p-5 text-left sm:p-6">
               <p className="text-sm font-semibold text-muted-foreground">Sem o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
@@ -242,7 +245,7 @@ function Index() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border-2 border-primary bg-card p-6 text-left">
+            <div className="rounded-2xl border-2 border-primary bg-card p-5 text-left sm:p-6">
               <p className="text-sm font-semibold text-rose-deep">Com o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
@@ -259,7 +262,7 @@ function Index() {
               </ul>
             </div>
           </div>
-          <blockquote className="mx-auto mt-10 max-w-2xl text-base italic sm:text-lg">
+          <blockquote className="mx-auto mt-8 max-w-2xl text-sm italic sm:text-lg">
             “Uma unha bem feita é cartão de visita. Quando o acabamento impressiona, a cliente
             volta e traz amiga.”
           </blockquote>
@@ -268,27 +271,27 @@ function Index() {
       </section>
 
       {/* MÓDULOS */}
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-5">
-          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
             6 módulos, do zero ao atendimento premium
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-center text-sm text-muted-foreground">
+          <p className="mx-auto mt-3 max-w-xl text-center text-xs text-muted-foreground sm:text-sm">
             Direto ao ponto: cada módulo resolve um problema que hoje te faz perder cliente e
             dinheiro.
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {modulos.map(([n, titulo, desc]) => (
-              <div key={n} className="rounded-2xl border border-border bg-card p-6">
+              <div key={n} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
                 <span className="font-display text-2xl font-bold text-gold">{n}</span>
                 <h3 className="mt-3 text-sm font-semibold">{titulo}</h3>
                 <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
               </div>
             ))}
           </div>
-          <div className="mx-auto mt-10 max-w-md">
+          <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero dominar as 6 técnicas</CtaButton>
-            <p className="mt-3 text-center text-xs text-muted-foreground">
+            <p className="mt-3 text-center text-[11px] text-muted-foreground">
               Garantia de 7 dias · Acesso imediato
             </p>
           </div>
@@ -296,11 +299,11 @@ function Index() {
       </section>
 
       {/* SEGREDOS + MENTORA */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 px-5 md:grid-cols-2">
+      <section className="bg-secondary/50 py-12 sm:py-16">
+        <div className="mx-auto grid max-w-5xl items-center gap-8 px-4 sm:px-6 md:grid-cols-2">
           <div>
-            <h2 className="font-display text-xl font-bold sm:text-2xl">O que ninguém te conta</h2>
-            <p className="mt-3 text-sm text-muted-foreground">
+            <h2 className="font-display text-lg font-bold sm:text-2xl">O que ninguém te conta</h2>
+            <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
               Os detalhes que separam quem cobra R$ 40 de quem cobra R$ 150 — e que nenhum tutorial
               gratuito mostra.
             </p>
@@ -324,13 +327,13 @@ function Index() {
             loading="lazy"
             width={912}
             height={1008}
-            className="rounded-3xl object-cover shadow-[var(--shadow-soft)]"
+            className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
           />
         </div>
 
-        <div className="mx-auto mt-14 max-w-3xl px-5">
-          <h2 className="font-display text-xl font-bold sm:text-2xl">Quem é Juliana Souza</h2>
-          <div className="mt-4 space-y-3 text-sm text-muted-foreground">
+        <div className="mx-auto mt-10 max-w-3xl px-4 sm:mt-14 sm:px-6">
+          <h2 className="font-display text-lg font-bold sm:text-2xl">Quem é Juliana Souza</h2>
+          <div className="mt-4 space-y-3 text-xs text-muted-foreground sm:text-sm">
             <p>
               Sou Juliana Souza, nail designer desde 2011. Me especializei em alongamento em gel e
               fibra porque é ali que a maioria erra — e onde está o maior ticket.
@@ -344,14 +347,14 @@ function Index() {
               tentativa e erro.
             </p>
           </div>
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
               ["+2.147", "alunas ativas"],
               ["4,9/5", "nota das alunas"],
               ["97%", "concluem o curso"],
               ["+14 anos", "de experiência"],
             ].map(([v, l]) => (
-              <div key={l} className="rounded-2xl bg-card p-4 text-center">
+              <div key={l} className="rounded-2xl bg-card p-3 text-center sm:p-4">
                 <div className="font-display text-xl font-bold text-gold">{v}</div>
                 <div className="text-[11px] text-muted-foreground">{l}</div>
               </div>
@@ -361,14 +364,14 @@ function Index() {
       </section>
 
       {/* DEPOIMENTOS */}
-      <section className="py-16">
-        <div className="mx-auto max-w-5xl px-5">
-          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
             4,9 de 5 · o que dizem as alunas
           </h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
             {depoimentos.map(([texto, autor]) => (
-              <figure key={autor} className="rounded-2xl border border-border bg-card p-6">
+              <figure key={autor} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="size-4 fill-gold text-gold" />
@@ -381,7 +384,7 @@ function Index() {
               </figure>
             ))}
           </div>
-          <div className="mx-auto mt-10 max-w-md">
+          <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero esse resultado também</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
               +2.000 alunas já valorizaram o próprio trabalho
@@ -391,20 +394,20 @@ function Index() {
       </section>
 
       {/* BÔNUS */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto max-w-5xl px-5 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">
+      <section className="bg-secondary/50 py-12 sm:py-16">
+        <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
             BÔNUS EXCLUSIVOS DESTA TURMA
           </p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
             R$ 528 em bônus liberados hoje
           </h2>
-          <p className="mx-auto mt-3 max-w-xl text-sm text-muted-foreground">
+          <p className="mx-auto mt-3 max-w-xl text-xs text-muted-foreground sm:text-sm">
             Saem do ar quando a turma fechar. Entrando agora, você leva tudo sem pagar nada a mais.
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
+          <div className="mt-6 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-5">
             {bonus.map(([valor, titulo, desc]) => (
-              <div key={titulo} className="rounded-2xl border border-border bg-card p-6 text-left">
+              <div key={titulo} className="rounded-2xl border border-border bg-card p-4 text-left sm:p-6">
                 <span className="rounded-full bg-primary px-3 py-1 text-[11px] font-semibold text-primary-foreground">
                   {valor}
                 </span>
@@ -417,9 +420,9 @@ function Index() {
       </section>
 
       {/* PARA QUEM É */}
-      <section className="py-16">
-        <div className="mx-auto grid max-w-4xl gap-5 px-5 md:grid-cols-2">
-          <div className="rounded-2xl border-2 border-primary bg-card p-6">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto grid max-w-4xl gap-4 px-4 sm:gap-5 sm:px-6 md:grid-cols-2">
+          <div className="rounded-2xl border-2 border-primary bg-card p-5 sm:p-6">
             <h2 className="font-display text-lg font-bold">É para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
@@ -435,7 +438,7 @@ function Index() {
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-border bg-card p-6">
+          <div className="rounded-2xl border border-border bg-card p-5 sm:p-6">
             <h2 className="font-display text-lg font-bold">Não é para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
@@ -454,23 +457,25 @@ function Index() {
       </section>
 
       {/* OFERTA */}
-      <section id="oferta" className="py-16" style={{ background: "var(--gradient-soft)" }}>
-        <div className="mx-auto max-w-2xl px-5 text-center">
-          <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">OFERTA DE LANÇAMENTO</p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">
+      <section id="oferta" className="py-12 sm:py-16" style={{ background: "var(--gradient-soft)" }}>
+        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
+          <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
+            OFERTA DE LANÇAMENTO
+          </p>
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
             Menos que um esmalte. Um atendimento já paga o curso.
           </h2>
-          <div className="mt-8 rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-soft)]">
+          <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
               Curso Completo de Unhas em Gel — Método Juliana Souza
             </p>
             <p className="mt-4 text-xs text-muted-foreground line-through">De R$ 1.025</p>
-            <p className="font-display text-4xl font-bold text-rose-deep">R$ 27,90</p>
+            <p className="font-display text-3xl font-bold text-rose-deep sm:text-4xl">R$ 27,90</p>
             <p className="mt-1 text-[11px] text-muted-foreground">
               pagamento único · acesso vitalício · sem mensalidade
             </p>
 
-            <ul className="mt-7 space-y-2.5 text-left text-xs">
+            <ul className="mt-6 space-y-2.5 text-left text-[11px] sm:text-xs">
               {[
                 ["6 módulos com técnicas completas", "R$ 497"],
                 ["Aulas de encapsulado e nail art", "incluso"],
@@ -479,8 +484,11 @@ function Index() {
                 ["Kit de posts para Instagram", "R$ 87"],
                 ["Grupo VIP de alunas + certificado", "R$ 197"],
               ].map(([item, valor]) => (
-                <li key={item} className="flex items-center justify-between gap-3 border-b border-border pb-2">
-                  <span className="flex gap-2">
+                <li
+                  key={item}
+                  className="flex items-center justify-between gap-3 border-b border-border pb-2"
+                >
+                  <span className="flex min-w-0 gap-2 text-left">
                     <Check className="size-4 shrink-0 text-rose-deep" />
                     {item}
                   </span>
@@ -507,14 +515,14 @@ function Index() {
       </section>
 
       {/* GARANTIA */}
-      <section className="py-16">
-        <div className="mx-auto max-w-2xl px-5 text-center">
-          <ShieldCheck className="mx-auto size-12 text-gold" />
-          <p className="mt-4 text-xs font-semibold tracking-[0.2em] text-rose-deep">
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
+          <ShieldCheck className="mx-auto size-10 text-gold sm:size-12" />
+          <p className="mt-4 text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
             7 DIAS DE GARANTIA — RISCO ZERO
           </p>
-          <h2 className="mt-2 font-display text-xl font-bold sm:text-2xl">O risco é todo meu</h2>
-          <p className="mt-3 text-sm text-muted-foreground">
+          <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">O risco é todo meu</h2>
+          <p className="mt-3 text-xs text-muted-foreground sm:text-sm">
             Teste por 7 dias. Se não fizer sentido para você, devolvo 100% do valor — sem perguntas
             e sem burocracia.
           </p>
@@ -522,28 +530,39 @@ function Index() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-secondary/50 py-16">
-        <div className="mx-auto max-w-2xl px-5">
-          <h2 className="text-center font-display text-xl font-bold sm:text-2xl">
+      <section className="bg-secondary/50 py-12 pb-24 sm:py-16 sm:pb-16">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
             Perguntas frequentes
           </h2>
-          <div className="mt-8 space-y-3">
+          <div className="mt-6 space-y-3 sm:mt-8">
             {faq.map(([q, a]) => (
-              <details key={q} className="rounded-2xl border border-border bg-card p-5">
+              <details key={q} className="rounded-2xl border border-border bg-card p-4 sm:p-5">
                 <summary className="cursor-pointer list-none text-sm font-semibold">{q}</summary>
                 <p className="mt-3 text-xs text-muted-foreground">{a}</p>
               </details>
             ))}
           </div>
-          <div className="mx-auto mt-10 max-w-md">
+          <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
           </div>
         </div>
       </section>
 
-      <footer className="bg-cocoa py-8 text-center text-xs text-background/70">
+      <footer className="bg-cocoa px-4 pb-24 pt-8 text-center text-[11px] text-background/70 sm:pb-8">
         Método Juliana Souza · Todos os direitos reservados
       </footer>
+
+      {/* CTA fixo mobile */}
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 px-4 py-3 backdrop-blur md:hidden">
+        <div className="flex items-center gap-3">
+          <div className="min-w-0">
+            <p className="text-[10px] text-muted-foreground line-through">R$ 1.025</p>
+            <p className="font-display text-base font-bold leading-none text-rose-deep">R$ 27,90</p>
+          </div>
+          <CtaButton className="flex-1">Quero agora</CtaButton>
+        </div>
+      </div>
     </main>
   );
 }
