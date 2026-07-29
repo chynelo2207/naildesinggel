@@ -317,7 +317,6 @@ function Index() {
               ))}
             </ul>
           </div>
-          <ul className="mt-6 hidden space-y-2.5 text-xs md:block" aria-hidden="true" />
         </div>
 
         <div className="mx-auto mt-10 grid max-w-5xl items-center gap-6 px-4 sm:mt-14 sm:gap-8 sm:px-6 md:grid-cols-2">
