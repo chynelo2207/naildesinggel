@@ -181,7 +181,7 @@ function Index() {
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero começar por R$ 27,90</CtaButton>
+              <CtaButton>Quero aprender por R$ 27,90</CtaButton>
             </div>
             <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-muted-foreground">
               <span>✓ ACESSO IMEDIATO</span>
@@ -196,7 +196,7 @@ function Index() {
       {/* GALERIA */}
       <section className="py-10 sm:py-14">
         <h2 className="px-4 text-center font-display text-lg font-bold sm:text-2xl">
-          Resultados que fazem a cliente indicar você
+          O tipo de trabalho que faz a cliente indicar você
         </h2>
         <div className="mt-6 overflow-hidden sm:mt-8">
           <div className="flex w-max animate-marquee gap-3 sm:gap-4">
@@ -222,7 +222,7 @@ function Index() {
             A VIRADA DE CHAVE
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            O que muda quando você domina o método
+            A diferença entre cobrar R$ 40 e cobrar R$ 150
           </h2>
           <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
             <div className="rounded-2xl border border-border bg-card p-5 text-left sm:p-6">
@@ -286,7 +286,7 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero dominar as 6 técnicas</CtaButton>
+            <CtaButton>Quero as 6 técnicas por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
               Garantia de 7 dias · Acesso imediato
             </p>
@@ -381,9 +381,9 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero esse resultado também</CtaButton>
+            <CtaButton>Quero esse resultado por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              +2.000 alunas já valorizaram o próprio trabalho
+              +2.000 alunas já cobram mais pelo próprio trabalho
             </p>
           </div>
         </div>
@@ -459,7 +459,7 @@ function Index() {
             OFERTA DE LANÇAMENTO
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Menos que um esmalte. Um atendimento já paga o curso.
+            Menos que um esmalte. O primeiro atendimento já paga o curso.
           </h2>
           <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
@@ -548,6 +548,8 @@ function Index() {
       <footer className="bg-cocoa px-4 pb-24 pt-8 text-center text-[11px] text-background/70 sm:pb-8">
         Método Juliana Souza · Todos os direitos reservados
       </footer>
+
+      <SalesNotification />
 
       {/* CTA fixo mobile */}
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 px-4 py-3 backdrop-blur md:hidden">
