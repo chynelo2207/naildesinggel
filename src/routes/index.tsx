@@ -3,6 +3,7 @@ import { Check, X, Star, Clock, Flame, ShieldCheck, Lock, Sparkles } from "lucid
 
 import { Countdown } from "@/components/Countdown";
 import { CtaButton } from "@/components/CtaButton";
+import { SalesNotification } from "@/components/SalesNotification";
 import heroImg from "@/assets/hero-mentora.jpg";
 import retratoImg from "@/assets/mentora-retrato.jpg";
 import unhas1 from "@/assets/unhas-1.jpg";
@@ -74,18 +75,13 @@ const faq = [
 function Index() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
-      {/* Prova social flutuante */}
-      <div className="bg-cocoa px-4 py-2 text-center text-[11px] leading-snug text-background/90">
-        Camila S. acabou de comprar · São Paulo, SP · há 2 minutos
-      </div>
-
       {/* HERO */}
       <section className="relative" style={{ background: "var(--gradient-soft)" }}>
         <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:py-20">
           <div>
             <h1 className="font-display text-[26px] leading-[1.15] font-bold tracking-tight sm:text-4xl">
-              Faça unhas em gel de <span className="text-gold">alto padrão</span> e cobre até 3x
-              mais em cada atendimento
+              Aprenda a fazer unhas em gel que <span className="text-gold">duram 30 dias</span> e
+              cobre até 3x mais por atendimento
             </h1>
             <div className="relative mt-6">
               <img
@@ -113,8 +109,8 @@ function Index() {
               NAIL DESIGNER · ESPECIALISTA EM ALONGAMENTOS EM GEL E FIBRA
             </p>
             <p className="mt-4 text-sm sm:text-base">
-              O passo a passo completo para fazer alongamento que dura 30 dias, encher a agenda e
-              viver da unha — mesmo começando do zero, em casa.
+              Passo a passo em vídeo para você largar o preço baixo, encher a agenda e viver da
+              unha — começando do zero, em casa, com um kit simples.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
