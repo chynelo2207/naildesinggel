@@ -75,40 +75,41 @@ function Index() {
   return (
     <main className="overflow-x-hidden bg-background text-foreground">
       {/* Prova social flutuante */}
-      <div className="bg-cocoa py-2 text-center text-xs text-background/90">
+      <div className="bg-cocoa px-4 py-2 text-center text-[11px] leading-snug text-background/90">
         Camila S. acabou de comprar · São Paulo, SP · há 2 minutos
       </div>
 
       {/* HERO */}
       <section className="relative" style={{ background: "var(--gradient-soft)" }}>
-        <div className="mx-auto grid max-w-6xl items-start gap-10 px-5 py-14 lg:grid-cols-2 lg:py-20">
+        <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:py-20">
           <div>
-            <h1 className="font-display text-2xl leading-tight font-bold sm:text-4xl">
+            <h1 className="font-display text-[26px] leading-[1.15] font-bold tracking-tight sm:text-4xl">
               Faça unhas em gel de <span className="text-gold">alto padrão</span> e cobre até 3x
               mais em cada atendimento
             </h1>
-            <div className="relative mt-8">
+            <div className="relative mt-6">
               <img
                 src={heroImg}
                 alt="Nail designer aplicando alongamento em gel em uma cliente"
                 width={912}
                 height={1104}
-                className="w-full rounded-3xl object-cover shadow-[var(--shadow-soft)]"
+                fetchPriority="high"
+                className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
               />
-              <div className="absolute -bottom-6 -left-4 rounded-2xl bg-card px-6 py-4 shadow-[var(--shadow-soft)]">
-                <div className="font-display text-3xl font-bold text-gold">6</div>
-                <div className="text-[11px] tracking-widest text-muted-foreground">
+              <div className="absolute -bottom-4 left-3 rounded-xl bg-card px-4 py-3 shadow-[var(--shadow-soft)] sm:-bottom-6 sm:-left-4 sm:rounded-2xl sm:px-6 sm:py-4">
+                <div className="font-display text-2xl font-bold text-gold sm:text-3xl">6</div>
+                <div className="text-[10px] tracking-widest text-muted-foreground sm:text-[11px]">
                   MÓDULOS COMPLETOS
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="pt-2 lg:pt-4">
-            <p className="text-xs font-semibold tracking-[0.2em] text-rose-deep">
+          <div className="pt-6 lg:pt-4">
+            <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep sm:text-xs">
               MÉTODO JULIANA SOUZA
             </p>
-            <p className="mt-2 text-xs tracking-[0.15em] text-muted-foreground">
+            <p className="mt-2 text-[10px] tracking-[0.15em] text-muted-foreground sm:text-xs">
               NAIL DESIGNER · ESPECIALISTA EM ALONGAMENTOS EM GEL E FIBRA
             </p>
             <p className="mt-4 text-sm sm:text-base">
@@ -116,7 +117,7 @@ function Index() {
               viver da unha — mesmo começando do zero, em casa.
             </p>
 
-            <div className="mt-4 flex flex-wrap items-center gap-4 text-xs">
+            <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
               <span className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="size-4 fill-gold text-gold" />
@@ -150,7 +151,7 @@ function Index() {
               </p>
             </div>
 
-            <ul className="mt-5 grid gap-2 sm:grid-cols-2">
+            <ul className="mt-5 grid gap-2 xs:grid-cols-2 sm:grid-cols-2">
               {[
                 "Método exclusivo Juliana Souza",
                 "Alongamento em gel e fibra que não descola",
@@ -166,9 +167,9 @@ function Index() {
               ))}
             </ul>
 
-            <div className="mt-7 rounded-2xl border border-border bg-card p-5">
-              <p className="flex items-center gap-2 text-xs font-semibold tracking-widest text-gold">
-                <Clock className="size-4" /> A OFERTA DE 70% OFF EXPIRA EM
+            <div className="mt-6 rounded-2xl border border-border bg-card p-4 sm:p-5">
+              <p className="flex items-center gap-2 text-[11px] font-semibold tracking-widest text-gold sm:text-xs">
+                <Clock className="size-4 shrink-0" /> A OFERTA DE 70% OFF EXPIRA EM
               </p>
               <div className="mt-3">
                 <Countdown />
