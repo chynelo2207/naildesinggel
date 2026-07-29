@@ -109,12 +109,8 @@ function Index() {
             <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep sm:text-xs">
               MÉTODO JULIANA SOUZA
             </p>
-            <p className="mt-2 text-[10px] tracking-[0.15em] text-muted-foreground sm:text-xs">
-              NAIL DESIGNER · ESPECIALISTA EM ALONGAMENTOS EM GEL E FIBRA
-            </p>
-            <p className="mt-4 text-sm sm:text-base">
-              Passo a passo em vídeo para você largar o preço baixo, encher a agenda e viver da
-              unha — começando do zero, em casa, com um kit simples.
+            <p className="mt-3 text-sm sm:text-base">
+              Passo a passo em vídeo para começar do zero, em casa, com um kit simples.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
@@ -124,10 +120,6 @@ function Index() {
                 ))}
                 <strong className="ml-1">4,9</strong>
                 <span className="text-muted-foreground">· +2.147 avaliações</span>
-              </span>
-              <span className="flex items-center gap-2 text-muted-foreground">
-                <span className="size-2 rounded-full bg-rose-deep" />
-                236 pessoas online agora
               </span>
             </div>
 
@@ -153,11 +145,8 @@ function Index() {
 
             <ul className="mt-5 grid gap-2 sm:grid-cols-2">
               {[
-                "Método exclusivo Juliana Souza",
                 "Alongamento em gel e fibra que não descola",
                 "Acabamento nível salão de luxo",
-                "Nail art autoral que vende sozinha",
-                "Encapsulado e decoração 3D",
                 "Quanto cobrar para lucrar de verdade",
               ].map((t) => (
                 <li key={t} className="flex items-start gap-2 text-xs">
@@ -190,8 +179,6 @@ function Index() {
             <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-muted-foreground">
               <span>✓ ACESSO IMEDIATO</span>
               <span>✓ 7 DIAS DE GARANTIA</span>
-              <span>✓ SSL CRIPTOGRAFADO</span>
-              <span>✓ CERTIFICADO</span>
             </p>
           </div>
         </div>
