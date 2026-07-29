@@ -87,8 +87,8 @@ function Index() {
               <img
                 src={heroImg}
                 alt="Nail designer aplicando alongamento em gel em uma cliente"
-                width={912}
-                height={1104}
+                width={743}
+                height={900}
                 fetchPriority="high"
                 className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
               />
@@ -134,7 +134,7 @@ function Index() {
                     key={g.alt}
                     src={g.src}
                     alt={g.alt}
-                    loading="lazy"
+                    loading="lazy" decoding="async"
                     width={700}
                     height={700}
                     className="size-10 rounded-full border-2 border-background object-cover"
@@ -205,7 +205,7 @@ function Index() {
                 key={i}
                 src={g.src}
                 alt={g.alt}
-                loading="lazy"
+                loading="lazy" decoding="async"
                 width={700}
                 height={700}
                 className="size-32 rounded-xl object-cover sm:size-52 sm:rounded-2xl"
@@ -320,9 +320,9 @@ function Index() {
           <img
             src={retratoImg}
             alt="Retrato de Juliana Souza em seu estúdio de nail design"
-            loading="lazy"
-            width={912}
-            height={1008}
+            loading="lazy" decoding="async"
+            width={743}
+            height={900}
             className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-soft)] sm:aspect-auto sm:rounded-3xl"
           />
         </div>
