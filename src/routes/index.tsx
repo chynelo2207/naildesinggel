@@ -475,7 +475,7 @@ function Index() {
             BÔNUS EXCLUSIVOS DESTA TURMA
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Leve R$ 528 em bônus sem pagar R$ 1 a mais
+            R$ 528 em bônus — úteis desde a primeira cliente até a centésima
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-xs text-muted-foreground sm:text-sm">
             Eles saem do ar quando esta turma fechar. Quem entra hoje leva tudo.
@@ -501,10 +501,10 @@ function Index() {
             <h2 className="font-display text-lg font-bold">É para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
-                "Você faz unha bem, mas cobra barato e sabe disso",
-                "Já perdeu horas em tutorial solto e continuou errando o acabamento",
-                "Tem medo de estragar a mão da cliente e nunca mais vê-la",
-                "Quer sua própria renda, em casa, sem depender de patrão",
+                "Nunca fez uma unha e quer aprender certo, do zero, sem gambiarra",
+                "Já faz unha, cobra barato e sabe que o trabalho vale mais",
+                "Tem medo de estragar a mão da cliente — seja a primeira ou a próxima",
+                "Quer sua própria renda, em casa, no seu horário",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <Check className="size-4 shrink-0 text-rose-deep" />
@@ -538,7 +538,7 @@ function Index() {
             OFERTA DE LANÇAMENTO
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Custa menos que um esmalte. Uma única cliente já devolve o valor.
+            Custa menos que um esmalte. Serve pra começar do zero ou pra dobrar o que você já cobra.
           </h2>
           <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
@@ -547,7 +547,7 @@ function Index() {
             <p className="mt-4 text-xs text-muted-foreground line-through">De R$ 1.025</p>
             <p className="font-display text-3xl font-bold text-rose-deep sm:text-4xl">R$ 27,90</p>
             <p className="mt-1 text-[11px] text-muted-foreground">
-              pagamento único · acesso vitalício · sem mensalidade
+              pagamento único · acesso vitalício · sem mensalidade · 7 dias de garantia
             </p>
 
             <ul className="mt-6 space-y-2.5 text-left text-[11px] sm:text-xs">
@@ -621,7 +621,8 @@ function Index() {
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              Amanhã você pode estar cobrando o dobro — ou exatamente o mesmo de hoje.
+              Daqui a 30 dias você pode estar fazendo sua primeira unha de gel — ou cobrando R$ 150
+              pela que já sabe fazer. Os dois começam hoje, na mesma aula.
             </p>
           </div>
         </div>
