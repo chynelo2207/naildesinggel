@@ -45,37 +45,60 @@ const galeria = [
 ];
 
 const modulos = [
-  ["01", "Gel na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta."],
-  ["02", "Alongamento gel e fibra", "Molde certo na primeira tentativa. Unha firme, leve e sem quebrar."],
-  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto: a cliente mostra a foto e você entrega igual."],
-  ["04", "Nail art de salão", "O acabamento que vira story da cliente e traz amiga sem você pedir."],
-  ["05", "Encapsulado 3D", "O serviço mais caro da tabela, feito no mesmo tempo do básico."],
-  ["06", "Venda o seu atendimento", "Como subir o preço e a cliente agradecer. Agenda cheia sem anúncio."],
+  ["01", "Gel na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta.", "Essencial para quem começa · corrige erro antigo de quem já atende"],
+  ["02", "Alongamento gel e fibra", "Molde certo na primeira tentativa. Unha firme, leve e sem quebrar.", ""],
+  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto: a cliente mostra a foto e você entrega igual.", ""],
+  ["04", "Nail art de salão", "O acabamento que vira story da cliente e traz amiga sem você pedir.", ""],
+  ["05", "Encapsulado 3D", "O serviço mais caro da tabela, feito no mesmo tempo do básico.", "O upgrade que quem já atende busca"],
+  ["06", "Venda o seu atendimento", "Como subir o preço e a cliente agradecer.", "Monte sua primeira tabela ou reajuste a que já usa"],
 ];
 
-const depoimentos = [
-  ["Minha primeira encapsulada ficou perfeita. A cliente disse que nunca tinha visto aquele acabamento.", "Ana Beatriz · São Paulo, SP"],
+const depoimentosZero = [
+  ["Nunca tinha feito uma unha na vida. Hoje atendo 6 clientes fixas e todas indicadas.", "Ana Beatriz · São Paulo, SP"],
+  ["Tinha medo de estragar a mão de alguém. Fiz a primeira unha ainda na primeira semana de curso.", "Renata Oliveira · Curitiba, PR"],
+];
+
+const depoimentosPro = [
   ["Passei de R$ 45 para R$ 150 no alongamento. As clientes me procuram pelo resultado.", "Cláudia Menezes · Belo Horizonte, MG"],
-  ["O passo a passo é tão claro que não tem como errar. Não perco mais tempo com vídeo solto.", "Renata Oliveira · Curitiba, PR"],
-  ["Atendi 8 clientes novas no primeiro mês. O método realmente transforma.", "Fernanda Lopes · Rio de Janeiro, RJ"],
-  ["Parei de ter unha descolando. Minhas clientes marcam de 3 em 3 semanas.", "Juliana Ramos · Porto Alegre, RS"],
   ["Sou manicure há 10 anos e ainda aprendi detalhes que mudaram meu atendimento.", "Patrícia Nunes · Salvador, BA"],
+  ["Parei de ter unha descolando. Minhas clientes marcam de 3 em 3 semanas.", "Juliana Ramos · Porto Alegre, RS"],
+  ["Atendi 8 clientes novas no primeiro mês. O método realmente transforma.", "Fernanda Lopes · Rio de Janeiro, RJ"],
 ];
 
 const bonus = [
-  ["R$ 97 grátis", "Lista de Fornecedores", "Pare de queimar dinheiro com material ruim: compre o que eu compro, pelo menor preço."],
-  ["R$ 147 grátis", "Tabela de Preços Pronta", "É só copiar. Quanto cobrar em cada serviço para lucrar já na primeira cliente."],
-  ["R$ 87 grátis", "Kit de Posts para Instagram", "30 artes + legendas prontas. Poste hoje e comece a receber mensagem de cliente."],
-  ["R$ 197 grátis", "Grupo VIP de Alunas", "Manda foto do seu trabalho e eu corrijo. Você nunca fica travada sozinha."],
+  ["R$ 97 grátis", "Lista de Fornecedores", "Essencial se você ainda não sabe onde comprar — e economiza dinheiro se você já compra errado."],
+  ["R$ 147 grátis", "Tabela de Preços Pronta", "Sua primeira tabela, ou o reajuste que faltava."],
+  ["R$ 87 grátis", "Kit de Posts para Instagram", "Quem está começando divulga do zero; quem já atende, atualiza o feed."],
+  ["R$ 197 grátis", "Grupo VIP de Alunas", "Corrijo sua unha por foto, seja a primeira ou a centésima que você faz."],
 ];
 
 const faq = [
   ["Nunca fiz alongamento. Consigo?", "Sim. Começa do zero, com a câmera em cima da mão, cada movimento explicado. Alunas fazem a primeira unha ainda na primeira semana."],
+  ["Já atendo há anos, esse curso ainda vale pra mim?", "Vale — principalmente. A maioria das alunas que já atendia veio corrigir um erro que carregava há anos (levantamento, molde torto) ou aprender o que ainda não sabia (encapsulado, precificação). É comum aluna experiente dizer que aprendeu mais aqui do que esperava."],
   ["Quando eu recebo?", "Na hora. Pagou, o acesso cai no seu e-mail em minutos — e é vitalício, sem mensalidade."],
   ["Preciso de muito material?", "Não. Um kit básico resolve, e a lista de fornecedores mostra onde comprar pagando bem menos."],
-  ["E se eu travar no meio?", "Você manda foto no grupo VIP e eu mesma corrijo. Ninguém fica sozinha."],
+  ["E se eu travar no meio?", "Você manda foto no grupo VIP e eu mesma corrijo. Ninguém fica sozinha, do primeiro ao último módulo."],
   ["E se eu não gostar?", "Você tem 7 dias para pedir o dinheiro de volta. Sem pergunta, sem burocracia. O risco é meu."],
 ];
+
+const perfis = [
+  [
+    "Se você está começando agora:",
+    [
+      "Nunca encostou num gel e tem medo de estragar a mão de alguém",
+      "Quer uma renda própria, em casa, sem precisar de experiência prévia",
+      "Prefere aprender certo da primeira vez, sem gambiarra de tutorial solto",
+    ],
+  ],
+  [
+    "Se você já atende:",
+    [
+      "Sabe fazer unha, mas ainda cobra R$ 40-60 e sente que vale mais",
+      "Já perdeu cliente por descolamento e não sabe exatamente onde erra",
+      "Quer add serviços de maior valor (encapsulado, nail art) sem fazer outro curso do zero",
+    ],
+  ],
+] as const;
 
 function Index() {
   return (
