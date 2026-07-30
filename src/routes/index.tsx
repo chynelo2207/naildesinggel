@@ -45,37 +45,60 @@ const galeria = [
 ];
 
 const modulos = [
-  ["01", "Gel na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta."],
-  ["02", "Alongamento gel e fibra", "Molde certo na primeira tentativa. Unha firme, leve e sem quebrar."],
-  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto: a cliente mostra a foto e você entrega igual."],
-  ["04", "Nail art de salão", "O acabamento que vira story da cliente e traz amiga sem você pedir."],
-  ["05", "Encapsulado 3D", "O serviço mais caro da tabela, feito no mesmo tempo do básico."],
-  ["06", "Venda o seu atendimento", "Como subir o preço e a cliente agradecer. Agenda cheia sem anúncio."],
+  ["01", "Gel na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta.", "Essencial para quem começa · corrige erro antigo de quem já atende"],
+  ["02", "Alongamento gel e fibra", "Molde certo na primeira tentativa. Unha firme, leve e sem quebrar.", ""],
+  ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto: a cliente mostra a foto e você entrega igual.", ""],
+  ["04", "Nail art de salão", "O acabamento que vira story da cliente e traz amiga sem você pedir.", ""],
+  ["05", "Encapsulado 3D", "O serviço mais caro da tabela, feito no mesmo tempo do básico.", "O upgrade que quem já atende busca"],
+  ["06", "Venda o seu atendimento", "Como subir o preço e a cliente agradecer.", "Monte sua primeira tabela ou reajuste a que já usa"],
 ];
 
-const depoimentos = [
-  ["Minha primeira encapsulada ficou perfeita. A cliente disse que nunca tinha visto aquele acabamento.", "Ana Beatriz · São Paulo, SP"],
+const depoimentosZero = [
+  ["Nunca tinha feito uma unha na vida. Hoje atendo 6 clientes fixas e todas indicadas.", "Ana Beatriz · São Paulo, SP"],
+  ["Tinha medo de estragar a mão de alguém. Fiz a primeira unha ainda na primeira semana de curso.", "Renata Oliveira · Curitiba, PR"],
+];
+
+const depoimentosPro = [
   ["Passei de R$ 45 para R$ 150 no alongamento. As clientes me procuram pelo resultado.", "Cláudia Menezes · Belo Horizonte, MG"],
-  ["O passo a passo é tão claro que não tem como errar. Não perco mais tempo com vídeo solto.", "Renata Oliveira · Curitiba, PR"],
-  ["Atendi 8 clientes novas no primeiro mês. O método realmente transforma.", "Fernanda Lopes · Rio de Janeiro, RJ"],
-  ["Parei de ter unha descolando. Minhas clientes marcam de 3 em 3 semanas.", "Juliana Ramos · Porto Alegre, RS"],
   ["Sou manicure há 10 anos e ainda aprendi detalhes que mudaram meu atendimento.", "Patrícia Nunes · Salvador, BA"],
+  ["Parei de ter unha descolando. Minhas clientes marcam de 3 em 3 semanas.", "Juliana Ramos · Porto Alegre, RS"],
+  ["Atendi 8 clientes novas no primeiro mês. O método realmente transforma.", "Fernanda Lopes · Rio de Janeiro, RJ"],
 ];
 
 const bonus = [
-  ["R$ 97 grátis", "Lista de Fornecedores", "Pare de queimar dinheiro com material ruim: compre o que eu compro, pelo menor preço."],
-  ["R$ 147 grátis", "Tabela de Preços Pronta", "É só copiar. Quanto cobrar em cada serviço para lucrar já na primeira cliente."],
-  ["R$ 87 grátis", "Kit de Posts para Instagram", "30 artes + legendas prontas. Poste hoje e comece a receber mensagem de cliente."],
-  ["R$ 197 grátis", "Grupo VIP de Alunas", "Manda foto do seu trabalho e eu corrijo. Você nunca fica travada sozinha."],
+  ["R$ 97 grátis", "Lista de Fornecedores", "Essencial se você ainda não sabe onde comprar — e economiza dinheiro se você já compra errado."],
+  ["R$ 147 grátis", "Tabela de Preços Pronta", "Sua primeira tabela, ou o reajuste que faltava."],
+  ["R$ 87 grátis", "Kit de Posts para Instagram", "Quem está começando divulga do zero; quem já atende, atualiza o feed."],
+  ["R$ 197 grátis", "Grupo VIP de Alunas", "Corrijo sua unha por foto, seja a primeira ou a centésima que você faz."],
 ];
 
 const faq = [
   ["Nunca fiz alongamento. Consigo?", "Sim. Começa do zero, com a câmera em cima da mão, cada movimento explicado. Alunas fazem a primeira unha ainda na primeira semana."],
+  ["Já atendo há anos, esse curso ainda vale pra mim?", "Vale — principalmente. A maioria das alunas que já atendia veio corrigir um erro que carregava há anos (levantamento, molde torto) ou aprender o que ainda não sabia (encapsulado, precificação). É comum aluna experiente dizer que aprendeu mais aqui do que esperava."],
   ["Quando eu recebo?", "Na hora. Pagou, o acesso cai no seu e-mail em minutos — e é vitalício, sem mensalidade."],
   ["Preciso de muito material?", "Não. Um kit básico resolve, e a lista de fornecedores mostra onde comprar pagando bem menos."],
-  ["E se eu travar no meio?", "Você manda foto no grupo VIP e eu mesma corrijo. Ninguém fica sozinha."],
+  ["E se eu travar no meio?", "Você manda foto no grupo VIP e eu mesma corrijo. Ninguém fica sozinha, do primeiro ao último módulo."],
   ["E se eu não gostar?", "Você tem 7 dias para pedir o dinheiro de volta. Sem pergunta, sem burocracia. O risco é meu."],
 ];
+
+const perfis = [
+  [
+    "Se você está começando agora:",
+    [
+      "Nunca encostou num gel e tem medo de estragar a mão de alguém",
+      "Quer uma renda própria, em casa, sem precisar de experiência prévia",
+      "Prefere aprender certo da primeira vez, sem gambiarra de tutorial solto",
+    ],
+  ],
+  [
+    "Se você já atende:",
+    [
+      "Sabe fazer unha, mas ainda cobra R$ 40-60 e sente que vale mais",
+      "Já perdeu cliente por descolamento e não sabe exatamente onde erra",
+      "Quer add serviços de maior valor (encapsulado, nail art) sem fazer outro curso do zero",
+    ],
+  ],
+] as const;
 
 function Index() {
   return (
@@ -208,7 +231,35 @@ function Index() {
         </div>
       </section>
 
-      {/* ANTES / DEPOIS */}
+      {/* PARA QUEM É ESSE MÉTODO */}
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
+            Serve para você que nunca fez uma unha — e para você que já atende há anos
+          </h2>
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
+            {perfis.map(([titulo, itens]) => (
+              <div key={titulo} className="rounded-2xl border border-border bg-card p-5 sm:p-6">
+                <p className="text-sm font-semibold text-rose-deep">{titulo}</p>
+                <ul className="mt-4 space-y-2.5 text-xs">
+                  {itens.map((t) => (
+                    <li key={t} className="flex gap-2">
+                      <Check className="size-4 shrink-0 text-rose-deep" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mx-auto mt-6 max-w-2xl text-center text-xs font-semibold sm:text-sm">
+            Os dois caminhos levam ao mesmo lugar: unha que dura 30 dias e cliente que paga R$ 150
+            sem negociar.
+          </p>
+        </div>
+      </section>
+
+      {/* SEM MÉTODO x COM MÉTODO */}
       <section className="bg-secondary/50 py-12 sm:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
@@ -222,10 +273,10 @@ function Index() {
               <p className="text-sm font-semibold text-muted-foreground">Sem o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Descola em 1 semana e a cliente some sem avisar",
-                  "Cobra R$ 40, gasta material e ainda sai no prejuízo",
-                  "Frio na barriga cada vez que chega uma mão difícil",
-                  "Agenda vazia e sempre esperando o mês virar",
+                  "(iniciante) Trava antes de começar — tenta tutorial grátis e desiste",
+                  "(profissional) Unha descola em 1 semana, cliente some sem avisar",
+                  "Cobra R$ 40, gasta material e sobra quase nada pela hora de trabalho",
+                  "Agenda vazia — ou cheia de clientes que pechincham o preço",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <X className="size-4 shrink-0 text-muted-foreground" />
@@ -238,10 +289,10 @@ function Index() {
               <p className="text-sm font-semibold text-rose-deep">Com o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Unha impecável que aguenta 30 dias de rotina real",
-                  "R$ 150+ por atendimento e agenda cheia de indicação",
-                  "Confiança para atender qualquer mão sem medo",
-                  "Sua própria renda, em casa, no seu horário",
+                  "(iniciante) Primeira unha pronta na primeira semana, com acabamento de salão",
+                  "(profissional) Unha aguenta 30 dias de rotina real, cliente marca o retorno na hora",
+                  "R$ 150+ por atendimento, agenda cheia de indicação",
+                  "Confiança para fechar qualquer mão — a primeira da carreira ou a mais difícil",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <Check className="size-4 shrink-0 text-rose-deep" />
@@ -263,17 +314,21 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            6 módulos: do zero ao atendimento de R$ 150
+            6 módulos: do primeiro gel ao atendimento de R$ 150
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-xs text-muted-foreground sm:text-sm">
-            Sem enrolação. Cada módulo mata um erro que hoje te faz perder cliente e dinheiro.
+            Comece no módulo 1 se nunca fez unha. Pule direto pro que te trava hoje se já atende — a
+            estrutura é modular, você assiste na sua ordem.
           </p>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {modulos.map(([n, titulo, desc]) => (
+            {modulos.map(([n, titulo, desc, nota]) => (
               <div key={n} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
                 <span className="font-display text-2xl font-bold text-gold">{n}</span>
                 <h3 className="mt-3 text-sm font-semibold">{titulo}</h3>
                 <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
+                {nota ? (
+                  <p className="mt-2 text-[11px] font-medium text-rose-deep">{nota}</p>
+                ) : null}
               </div>
             ))}
           </div>
@@ -378,27 +433,36 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            +2.147 alunas. Nota 4,9. Veja o que mudou para elas.
+            De quem nunca fez unha a quem já atende há 10 anos — o resultado é o mesmo
           </h2>
-          <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {depoimentos.map(([texto, autor]) => (
-              <figure key={autor} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="size-4 fill-gold text-gold" />
-                  ))}
-                </div>
-                <blockquote className="mt-3 text-xs italic">“{texto}”</blockquote>
-                <figcaption className="mt-4 text-[11px] text-muted-foreground">
-                  {autor} · Compra verificada
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          {[
+            ["Quem começou do zero:", depoimentosZero] as const,
+            ["Quem já atendia e evoluiu:", depoimentosPro] as const,
+          ].map(([grupo, lista]) => (
+            <div key={grupo} className="mt-6 sm:mt-10">
+              <p className="text-sm font-semibold text-rose-deep">{grupo}</p>
+              <div className="mt-3 grid gap-3 sm:gap-5 md:grid-cols-2">
+                {lista.map(([texto, autor]) => (
+                  <figure key={autor} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="size-4 fill-gold text-gold" />
+                      ))}
+                    </div>
+                    <blockquote className="mt-3 text-xs italic">“{texto}”</blockquote>
+                    <figcaption className="mt-4 text-[11px] text-muted-foreground">
+                      {autor} · Compra verificada
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          ))}
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero esse resultado por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              Elas começaram exatamente onde você está hoje
+              Elas começaram exatamente onde você está hoje — do zero ou do R$ 40. As duas chegaram
+              no mesmo lugar.
             </p>
           </div>
         </div>
@@ -411,7 +475,7 @@ function Index() {
             BÔNUS EXCLUSIVOS DESTA TURMA
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Leve R$ 528 em bônus sem pagar R$ 1 a mais
+            R$ 528 em bônus — úteis desde a primeira cliente até a centésima
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-xs text-muted-foreground sm:text-sm">
             Eles saem do ar quando esta turma fechar. Quem entra hoje leva tudo.
@@ -437,10 +501,10 @@ function Index() {
             <h2 className="font-display text-lg font-bold">É para você se…</h2>
             <ul className="mt-4 space-y-2.5 text-xs">
               {[
-                "Você faz unha bem, mas cobra barato e sabe disso",
-                "Já perdeu horas em tutorial solto e continuou errando o acabamento",
-                "Tem medo de estragar a mão da cliente e nunca mais vê-la",
-                "Quer sua própria renda, em casa, sem depender de patrão",
+                "Nunca fez uma unha e quer aprender certo, do zero, sem gambiarra",
+                "Já faz unha, cobra barato e sabe que o trabalho vale mais",
+                "Tem medo de estragar a mão da cliente — seja a primeira ou a próxima",
+                "Quer sua própria renda, em casa, no seu horário",
               ].map((t) => (
                 <li key={t} className="flex gap-2">
                   <Check className="size-4 shrink-0 text-rose-deep" />
@@ -474,7 +538,7 @@ function Index() {
             OFERTA DE LANÇAMENTO
           </p>
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
-            Custa menos que um esmalte. Uma única cliente já devolve o valor.
+            Custa menos que um esmalte. Serve pra começar do zero ou pra dobrar o que você já cobra.
           </h2>
           <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
             <p className="text-xs text-muted-foreground">
@@ -483,7 +547,7 @@ function Index() {
             <p className="mt-4 text-xs text-muted-foreground line-through">De R$ 1.025</p>
             <p className="font-display text-3xl font-bold text-rose-deep sm:text-4xl">R$ 27,90</p>
             <p className="mt-1 text-[11px] text-muted-foreground">
-              pagamento único · acesso vitalício · sem mensalidade
+              pagamento único · acesso vitalício · sem mensalidade · 7 dias de garantia
             </p>
 
             <ul className="mt-6 space-y-2.5 text-left text-[11px] sm:text-xs">
@@ -557,7 +621,8 @@ function Index() {
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              Amanhã você pode estar cobrando o dobro — ou exatamente o mesmo de hoje.
+              Daqui a 30 dias você pode estar fazendo sua primeira unha de gel — ou cobrando R$ 150
+              pela que já sabe fazer. Os dois começam hoje, na mesma aula.
             </p>
           </div>
         </div>
