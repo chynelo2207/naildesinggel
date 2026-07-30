@@ -433,27 +433,36 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            +2.147 alunas. Nota 4,9. Veja o que mudou para elas.
+            De quem nunca fez unha a quem já atende há 10 anos — o resultado é o mesmo
           </h2>
-          <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {depoimentos.map(([texto, autor]) => (
-              <figure key={autor} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
-                <div className="flex gap-0.5">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="size-4 fill-gold text-gold" />
-                  ))}
-                </div>
-                <blockquote className="mt-3 text-xs italic">“{texto}”</blockquote>
-                <figcaption className="mt-4 text-[11px] text-muted-foreground">
-                  {autor} · Compra verificada
-                </figcaption>
-              </figure>
-            ))}
-          </div>
+          {[
+            ["Quem começou do zero:", depoimentosZero] as const,
+            ["Quem já atendia e evoluiu:", depoimentosPro] as const,
+          ].map(([grupo, lista]) => (
+            <div key={grupo} className="mt-6 sm:mt-10">
+              <p className="text-sm font-semibold text-rose-deep">{grupo}</p>
+              <div className="mt-3 grid gap-3 sm:gap-5 md:grid-cols-2">
+                {lista.map(([texto, autor]) => (
+                  <figure key={autor} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
+                    <div className="flex gap-0.5">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="size-4 fill-gold text-gold" />
+                      ))}
+                    </div>
+                    <blockquote className="mt-3 text-xs italic">“{texto}”</blockquote>
+                    <figcaption className="mt-4 text-[11px] text-muted-foreground">
+                      {autor} · Compra verificada
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          ))}
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton>Quero esse resultado por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              Elas começaram exatamente onde você está hoje
+              Elas começaram exatamente onde você está hoje — do zero ou do R$ 40. As duas chegaram
+              no mesmo lugar.
             </p>
           </div>
         </div>
