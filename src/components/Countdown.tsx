@@ -28,7 +28,7 @@ export function Countdown({ compact = false }: { compact?: boolean }) {
           key={p.l}
           className={`min-w-[52px] rounded-xl bg-cocoa px-2.5 text-center text-primary-foreground sm:px-3 ${compact ? "py-1.5" : "py-2"}`}
         >
-          <div className="font-display text-xl font-bold text-rose sm:text-2xl">{p.v}</div>
+          <div className="font-display text-xl font-bold text-gold sm:text-2xl">{p.v}</div>
           <div className="text-[9px] tracking-widest text-background/70 sm:text-[10px]">{p.l}</div>
         </div>
       ))}
