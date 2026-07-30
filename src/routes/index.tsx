@@ -231,7 +231,35 @@ function Index() {
         </div>
       </section>
 
-      {/* ANTES / DEPOIS */}
+      {/* PARA QUEM É ESSE MÉTODO */}
+      <section className="py-12 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6">
+          <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
+            Serve para você que nunca fez uma unha — e para você que já atende há anos
+          </h2>
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5 md:grid-cols-2">
+            {perfis.map(([titulo, itens]) => (
+              <div key={titulo} className="rounded-2xl border border-border bg-card p-5 sm:p-6">
+                <p className="text-sm font-semibold text-rose-deep">{titulo}</p>
+                <ul className="mt-4 space-y-2.5 text-xs">
+                  {itens.map((t) => (
+                    <li key={t} className="flex gap-2">
+                      <Check className="size-4 shrink-0 text-rose-deep" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className="mx-auto mt-6 max-w-2xl text-center text-xs font-semibold sm:text-sm">
+            Os dois caminhos levam ao mesmo lugar: unha que dura 30 dias e cliente que paga R$ 150
+            sem negociar.
+          </p>
+        </div>
+      </section>
+
+      {/* SEM MÉTODO x COM MÉTODO */}
       <section className="bg-secondary/50 py-12 sm:py-16">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
           <p className="text-[11px] font-semibold tracking-[0.2em] text-rose-deep">
@@ -245,10 +273,10 @@ function Index() {
               <p className="text-sm font-semibold text-muted-foreground">Sem o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Descola em 1 semana e a cliente some sem avisar",
-                  "Cobra R$ 40, gasta material e ainda sai no prejuízo",
-                  "Frio na barriga cada vez que chega uma mão difícil",
-                  "Agenda vazia e sempre esperando o mês virar",
+                  "(iniciante) Trava antes de começar — tenta tutorial grátis e desiste",
+                  "(profissional) Unha descola em 1 semana, cliente some sem avisar",
+                  "Cobra R$ 40, gasta material e sobra quase nada pela hora de trabalho",
+                  "Agenda vazia — ou cheia de clientes que pechincham o preço",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <X className="size-4 shrink-0 text-muted-foreground" />
@@ -261,10 +289,10 @@ function Index() {
               <p className="text-sm font-semibold text-rose-deep">Com o método</p>
               <ul className="mt-4 space-y-2.5 text-xs">
                 {[
-                  "Unha impecável que aguenta 30 dias de rotina real",
-                  "R$ 150+ por atendimento e agenda cheia de indicação",
-                  "Confiança para atender qualquer mão sem medo",
-                  "Sua própria renda, em casa, no seu horário",
+                  "(iniciante) Primeira unha pronta na primeira semana, com acabamento de salão",
+                  "(profissional) Unha aguenta 30 dias de rotina real, cliente marca o retorno na hora",
+                  "R$ 150+ por atendimento, agenda cheia de indicação",
+                  "Confiança para fechar qualquer mão — a primeira da carreira ou a mais difícil",
                 ].map((t) => (
                   <li key={t} className="flex gap-2">
                     <Check className="size-4 shrink-0 text-rose-deep" />
