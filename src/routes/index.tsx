@@ -314,17 +314,21 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            6 módulos: do zero ao atendimento de R$ 150
+            6 módulos: do primeiro gel ao atendimento de R$ 150
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-xs text-muted-foreground sm:text-sm">
-            Sem enrolação. Cada módulo mata um erro que hoje te faz perder cliente e dinheiro.
+            Comece no módulo 1 se nunca fez unha. Pule direto pro que te trava hoje se já atende — a
+            estrutura é modular, você assiste na sua ordem.
           </p>
           <div className="mt-6 grid gap-3 sm:mt-10 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {modulos.map(([n, titulo, desc]) => (
+            {modulos.map(([n, titulo, desc, nota]) => (
               <div key={n} className="rounded-2xl border border-border bg-card p-4 sm:p-6">
                 <span className="font-display text-2xl font-bold text-gold">{n}</span>
                 <h3 className="mt-3 text-sm font-semibold">{titulo}</h3>
                 <p className="mt-2 text-xs text-muted-foreground">{desc}</p>
+                {nota ? (
+                  <p className="mt-2 text-[11px] font-medium text-rose-deep">{nota}</p>
+                ) : null}
               </div>
             ))}
           </div>
