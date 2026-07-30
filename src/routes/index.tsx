@@ -199,7 +199,7 @@ function Index() {
             </div>
 
             <div className="mt-6">
-              <CtaButton>Quero começar agora</CtaButton>
+              <CtaButton href="#oferta">Quero começar agora</CtaButton>
             </div>
             <p className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] tracking-widest text-muted-foreground">
               <span>✓ ACESSO IMEDIATO</span>
@@ -333,7 +333,7 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero dominar as 6 técnicas por R$ 27,90</CtaButton>
+            <CtaButton href="#oferta">Quero dominar as 6 técnicas por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
               Acesso imediato · 7 dias de garantia · risco zero
             </p>
@@ -459,7 +459,7 @@ function Index() {
             </div>
           ))}
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Quero esse resultado por R$ 27,90</CtaButton>
+            <CtaButton href="#oferta">Quero esse resultado por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
               Elas começaram exatamente onde você está hoje — do zero ou do R$ 40. As duas chegaram
               no mesmo lugar.
@@ -619,7 +619,7 @@ function Index() {
             ))}
           </div>
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
-            <CtaButton>Garantir minha vaga por R$ 27,90</CtaButton>
+            <CtaButton href="#oferta">Garantir minha vaga por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
               Daqui a 30 dias você pode estar fazendo sua primeira unha de gel — ou cobrando R$ 150
               pela que já sabe fazer. Os dois começam hoje, na mesma aula.
@@ -641,7 +641,7 @@ function Index() {
             <p className="text-[10px] text-muted-foreground line-through">R$ 1.025</p>
             <p className="font-display text-base font-bold leading-none text-rose-deep">R$ 27,90</p>
           </div>
-          <CtaButton className="flex-1">Quero agora</CtaButton>
+          <CtaButton href="#oferta" className="flex-1">Quero agora</CtaButton>
         </div>
       </div>
     </main>
