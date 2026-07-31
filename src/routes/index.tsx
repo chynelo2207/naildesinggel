@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Check, X, Star, Clock, Flame, ShieldCheck, Lock, Sparkles } from "lucide-react";
 
 import { Countdown } from "@/components/Countdown";
-import { CtaButton } from "@/components/CtaButton";
+import { CtaButton, CHECKOUT_URL_SIMPLES } from "@/components/CtaButton";
 import { SalesNotification } from "@/components/SalesNotification";
 import heroImg from "@/assets/hero-mentora.webp";
 import retratoImg from "@/assets/mentora-retrato.webp";
