@@ -540,9 +540,56 @@ function Index() {
           <h2 className="mt-2 font-display text-lg font-bold sm:text-2xl">
             Custa menos que um esmalte. Serve pra começar do zero ou pra dobrar o que você já cobra.
           </h2>
-          <div className="mt-6 rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-soft)] sm:mt-8 sm:rounded-3xl sm:p-7">
+          <div className="mt-6 grid gap-4 sm:mt-8 sm:grid-cols-[0.85fr_1.15fr] sm:items-start">
+          {/* PLANO SIMPLES */}
+          <div className="rounded-2xl border border-border bg-card p-5 text-left shadow-[var(--shadow-soft)] sm:rounded-3xl">
+            <p className="text-[11px] font-semibold tracking-[0.18em] text-muted-foreground">
+              PLANO ESSENCIAL
+            </p>
+            <p className="mt-1 text-xs text-muted-foreground">Só o curso, sem os extras</p>
+            <p className="mt-3 font-display text-2xl font-bold sm:text-3xl">R$ 19,90</p>
+            <p className="mt-1 text-[11px] text-muted-foreground">
+              pagamento único · acesso vitalício · 7 dias de garantia
+            </p>
+            <ul className="mt-5 space-y-2.5 text-[11px] sm:text-xs">
+              {[
+                ["6 módulos com técnicas completas", true],
+                ["Aulas de encapsulado e nail art", true],
+                ["Lista de fornecedores confiáveis", false],
+                ["Tabela de preços pronta para usar", false],
+                ["Kit de posts para Instagram", false],
+                ["Grupo VIP de alunas + certificado", false],
+              ].map(([item, incluso]) => (
+                <li
+                  key={item as string}
+                  className={`flex items-start gap-2 border-b border-border pb-2 ${incluso ? "" : "text-muted-foreground/60 line-through"}`}
+                >
+                  {incluso ? (
+                    <Check className="mt-0.5 size-4 shrink-0 text-rose-deep" />
+                  ) : (
+                    <X className="mt-0.5 size-4 shrink-0 text-muted-foreground/50" />
+                  )}
+                  {item as string}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6">
+              <CtaButton
+                href={CHECKOUT_URL_SIMPLES}
+                className="bg-secondary text-foreground shadow-none"
+              >
+                Quero o essencial por R$ 19,90
+              </CtaButton>
+            </div>
+          </div>
+
+          {/* PLANO COMPLETO — RECOMENDADO */}
+          <div className="relative rounded-2xl border-2 border-primary bg-card p-5 shadow-[var(--shadow-soft)] sm:rounded-3xl sm:p-7">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground">
+              Mais escolhido
+            </span>
             <p className="text-xs text-muted-foreground">
-              Curso Completo de Unhas em Gel — Método Juliana Souza
+              PLANO COMPLETO — Método Juliana Souza
             </p>
             <p className="mt-4 text-xs text-muted-foreground line-through">De R$ 1.025</p>
             <p className="font-display text-3xl font-bold text-rose-deep sm:text-4xl">R$ 27,90</p>
@@ -586,6 +633,11 @@ function Index() {
               <Lock className="size-3" /> Compra segura SSL · Acesso imediato
             </p>
           </div>
+          </div>
+          <p className="mt-4 text-[11px] text-muted-foreground">
+            9 em cada 10 alunas escolhem o Completo: por R$ 8 a mais você leva os fornecedores, a
+            tabela de preços e o grupo VIP — o que faz você começar a cobrar mais rápido.
+          </p>
         </div>
       </section>
 
