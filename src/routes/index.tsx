@@ -15,9 +15,9 @@ import cliente6 from "@/assets/cliente-6.webp";
 import cliente7 from "@/assets/cliente-7.webp";
 import cliente8 from "@/assets/cliente-8.webp";
 
-const TITLE = "Curso de Unhas em Gel — Método Juliana Souza";
+const TITLE = "Curso de Alongamento de Unhas F1/Fibra — Método Juliana Souza";
 const DESC =
-  "Aprenda alongamento em gel e fibra, nail art e encapsulado 3D com acabamento de salão premium. 6 módulos, acesso vitalício e 7 dias de garantia.";
+  "Aprenda alongamento em F1/fibra, nail art e encapsulado 3D com acabamento de salão premium. 6 módulos, acesso vitalício e 7 dias de garantia.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
 });
 
 const galeria = [
-  { src: cliente1, alt: "Unhas amêndoa em gel nude cremoso com brilho espelhado" },
+  { src: cliente1, alt: "Unhas amêndoa em fibra nude cremoso com brilho espelhado" },
   { src: cliente2, alt: "Unhas stiletto com degradê azul e verde neon" },
   { src: cliente3, alt: "Unhas amêndoa com degradê pink e laranja" },
   { src: cliente4, alt: "Nail art verde com efeito textura e brilho" },
@@ -45,8 +45,8 @@ const galeria = [
 ];
 
 const modulos = [
-  ["01", "Gel na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta.", "Essencial para quem começa · corrige erro antigo de quem já atende"],
-  ["02", "Alongamento gel e fibra", "Molde certo na primeira tentativa. Unha firme, leve e sem quebrar.", ""],
+  ["01", "Fibra na unha natural", "O preparo que acaba com levantamento — a cliente volta porque a unha aguenta.", "Essencial para quem começa · corrige erro antigo de quem já atende"],
+  ["02", "Alongamento F1/fibra", "A técnica F1 passo a passo: molde certo na primeira tentativa. Unha firme, leve e sem quebrar.", ""],
   ["03", "Formatos que vendem", "Amêndoa, coffin, stiletto: a cliente mostra a foto e você entrega igual.", ""],
   ["04", "Nail art de salão", "O acabamento que vira story da cliente e traz amiga sem você pedir.", ""],
   ["05", "Encapsulado 3D", "O serviço mais caro da tabela, feito no mesmo tempo do básico.", "O upgrade que quem já atende busca"],
@@ -85,7 +85,7 @@ const perfis = [
   [
     "Se você está começando agora:",
     [
-      "Nunca encostou num gel e tem medo de estragar a mão de alguém",
+      "Nunca encostou numa fibra e tem medo de estragar a mão de alguém",
       "Quer uma renda própria, em casa, sem precisar de experiência prévia",
       "Prefere aprender certo da primeira vez, sem gambiarra de tutorial solto",
     ],
@@ -108,13 +108,13 @@ function Index() {
         <div className="mx-auto grid max-w-6xl items-start gap-8 px-4 py-8 sm:px-6 sm:py-12 lg:grid-cols-2 lg:py-20">
           <div>
             <h1 className="font-display text-[26px] leading-[1.15] font-bold tracking-tight sm:text-4xl">
-              Faça unhas em gel que <span className="text-gold">duram 30 dias</span> — e cobre 3x
-              mais já no próximo atendimento
+              Faça alongamentos em F1/fibra que <span className="text-gold">duram 30 dias</span> — e
+              cobre 3x mais já no próximo atendimento
             </h1>
             <div className="relative mt-6">
               <img
                 src={heroImg}
-                alt="Nail designer aplicando alongamento em gel em uma cliente"
+                alt="Nail designer aplicando alongamento em F1/fibra em uma cliente"
                 width={743}
                 height={900}
                 fetchPriority="high"
@@ -314,7 +314,7 @@ function Index() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <h2 className="text-center font-display text-lg font-bold sm:text-2xl">
-            6 módulos: do primeiro gel ao atendimento de R$ 150
+            6 módulos: da primeira fibra ao atendimento de R$ 150
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-center text-xs text-muted-foreground sm:text-sm">
             Comece no módulo 1 se nunca fez unha. Pule direto pro que te trava hoje se já atende — a
@@ -355,7 +355,7 @@ function Index() {
             <ul className="mt-6 space-y-2.5 text-xs">
               {[
                 "O preparo que trava o levantamento em qualquer formato",
-                "O gel e o primer certos para cada tipo de unha",
+                "A fibra, o F1 e o primer certos para cada tipo de unha",
                 "Acabamento de salão gastando menos tempo por mão",
                 "Como subir o preço sem perder nenhuma cliente",
               ].map((t) => (
@@ -381,10 +381,10 @@ function Index() {
           <div>
             <h2 className="font-display text-lg font-bold sm:text-2xl">Quem é Juliana Souza</h2>
             <div className="mt-4 space-y-3 text-xs text-muted-foreground sm:text-sm">
-              <p>
-                Sou Juliana Souza, Nail Designer desde 2011. Especializei em alongamentos em gel e
-                fibra porque vi que era ali que a maioria errava — e onde dava para cobrar mais.
-              </p>
+                <p>
+                 Sou Juliana Souza, Nail Designer desde 2011. Especializei em alongamento em
+                 F1/fibra porque vi que era ali que a maioria errava — e onde dava para cobrar mais.
+               </p>
               <p>
                 Hoje levo técnicas internacionais para um acabamento de requinte. Atendo clientes de
                 referência dentro e fora do Brasil.
@@ -673,8 +673,8 @@ function Index() {
           <div className="mx-auto mt-8 max-w-md sm:mt-10">
             <CtaButton href="#oferta">Garantir minha vaga por R$ 27,90</CtaButton>
             <p className="mt-3 text-center text-[11px] text-muted-foreground">
-              Daqui a 30 dias você pode estar fazendo sua primeira unha de gel — ou cobrando R$ 150
-              pela que já sabe fazer. Os dois começam hoje, na mesma aula.
+              Daqui a 30 dias você pode estar fazendo sua primeira unha de fibra — ou cobrando R$ 150
+               pela que já sabe fazer. Os dois começam hoje, na mesma aula.
             </p>
           </div>
         </div>
