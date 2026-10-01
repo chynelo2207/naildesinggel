@@ -134,8 +134,8 @@ function Index() {
               MÉTODO JULIANA SOUZA
             </p>
             <p className="mt-3 text-sm sm:text-base">
-              Do zero, em casa, com um kit simples. O passo a passo que já colocou +2.000 manicures
-              cobrando preço de salão.
+              Do zero, em casa, com um kit simples. O passo a passo da técnica F1/fibra que já
+              colocou +2.000 manicures cobrando preço de salão.
             </p>
 
             <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs">
