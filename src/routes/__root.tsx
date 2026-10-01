@@ -101,7 +101,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     ],
     scripts: [
       // UTMify — pixel de conversão
-      { children: 'window.pixelId = "6a67b105b2899bd3690be8f7";' },
+      { children: 'window.pixelId = "6abe77af61fa781d0bda014c";' },
       {
         src: "https://cdn.utmify.com.br/scripts/pixel/pixel.js",
         async: true,
