@@ -16,7 +16,7 @@ import cliente6 from "@/assets/cliente-6.webp";
 import cliente7 from "@/assets/cliente-7.webp";
 import cliente8 from "@/assets/cliente-8.webp";
 
-const TITLE = "F1 Express — Alongamento profissional em até 1 hora | Juliana Souza";
+const TITLE = "F1 Express | Alongamento profissional em até 1 hora | Juliana Souza";
 const DESC =
   "Aprenda Molde F1 passo a passo e faça alongamentos resistentes, finos e com acabamento profissional em até 1 hora. De R$197 por R$27,90.";
 
@@ -121,7 +121,7 @@ function Index() {
           Aprenda Molde F1 e faça alongamentos profissionais <span className="text-rose-deep">em até 1 hora</span>
         </h1>
         <p className="mt-4 text-[18px] text-muted-foreground">
-          Mesmo começando do zero. Unhas resistentes, finas e com acabamento profissional — gastando menos tempo por cliente.
+          Mesmo começando do zero. Unhas resistentes, finas e com acabamento profissional, gastando menos tempo por cliente.
         </p>
         <img
           src={heroImg}
@@ -208,7 +208,7 @@ function Index() {
         <img src={retratoImg} alt="Juliana Souza, nail designer" loading="lazy" decoding="async" className="mx-auto aspect-[4/5] w-[78%] rounded-2xl object-cover" />
         <h2 className="mt-6 text-[28px] font-extrabold">Aprenda com Juliana Souza</h2>
         <p className="mt-3 text-[17px] text-muted-foreground">
-          Nail designer desde 2011, especialista em alongamentos. Criou o F1 Express para ensinar o caminho mais rápido até um acabamento profissional — sem enrolação.
+          Nail designer desde 2011, especialista em alongamentos. Criou o F1 Express para ensinar o caminho mais rápido até um acabamento profissional, sem enrolação.
         </p>
       </section>
 
