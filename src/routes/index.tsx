@@ -7,6 +7,7 @@ import { SalesNotification } from "@/components/SalesNotification";
 import heroImg from "@/assets/hero-mentora.webp";
 import retratoImg from "@/assets/mentora-retrato.webp";
 import cliente1 from "@/assets/cliente-1.webp";
+import cliente1Original from "@/assets/cliente-1-original.webp";
 import cliente2 from "@/assets/cliente-2.webp";
 import cliente3 from "@/assets/cliente-3.webp";
 import cliente4 from "@/assets/cliente-4.webp";
@@ -34,7 +35,7 @@ export const Route = createFileRoute("/")({
 });
 
 const resultados = [
-  { src: cliente1, label: "Amêndoa nude" },
+  { src: cliente1Original, label: "Amêndoa nude" },
   { src: cliente3, label: "Degradê" },
   { src: cliente6, label: "Natural" },
   { src: cliente4, label: "Nail art" },
