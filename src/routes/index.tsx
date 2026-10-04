@@ -5,7 +5,6 @@ import { Check, ChevronDown, Lock, ShieldCheck, Zap } from "lucide-react";
 import { CHECKOUT_URL } from "@/components/CtaButton";
 import { SalesNotification } from "@/components/SalesNotification";
 import heroImg from "@/assets/hero-mentora.webp";
-import retratoImg from "@/assets/mentora-retrato.webp";
 import cliente1 from "@/assets/cliente-1.webp";
 import cliente1Original from "@/assets/cliente-1-original.webp";
 import cliente2 from "@/assets/cliente-2.webp";
@@ -16,9 +15,9 @@ import cliente6 from "@/assets/cliente-6.webp";
 import cliente7 from "@/assets/cliente-7.webp";
 import cliente8 from "@/assets/cliente-8.webp";
 
-const TITLE = "F1 Express | Alongamento profissional em até 1 hora | Juliana Souza";
+const TITLE = "Método F1 Express | Aprenda Molde F1 passo a passo";
 const DESC =
-  "Aprenda Molde F1 passo a passo e faça alongamentos resistentes, finos e com acabamento profissional em até 1 hora. De R$197 por R$27,90.";
+  "Curso + manual visual de Molde F1: preparação, escolha do molde, aplicação, estrutura e acabamento. De R$97 por R$27,90.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -62,23 +61,19 @@ const passos = [
 ];
 
 const recebe = [
-  { icon: "🎓", t: "Método F1 Express", d: "Passo a passo completo do Molde F1." },
-  { icon: "💅", t: "Bônus: Fibra de Vidro" },
-  { icon: "🎨", t: "Bônus: Nail Art e Encapsulado" },
-  { icon: "📋", t: "Bônus: Tabela de Precificação" },
-  { icon: "🛍️", t: "Bônus: Lista de Fornecedores" },
-  { icon: "📱", t: "Bônus: Kit de Divulgação" },
-  { icon: "🏆", t: "Certificado de conclusão" },
+  { icon: "🎓", t: "Curso + Manual Visual", d: "Cada etapa do Molde F1 explicada com imagens." },
+  { icon: "🆘", t: "Guia SOS F1", d: "Os erros mais comuns e como corrigir." },
+  { icon: "✅", t: "Checklist F1 Express", d: "Confira cada etapa antes de seguir." },
+  { icon: "📐", t: "Guia de formatos", d: "Amêndoa, quadrada, stiletto e mais." },
+  { icon: "📂", t: "Materiais complementares" },
 ];
 
 const inclusos = [
-  "Molde F1 passo a passo",
-  "Técnica para reduzir o tempo de atendimento",
-  "Preparação para evitar descolamento",
-  "Acabamento fino e natural",
-  "Módulo bônus de Fibra de Vidro",
-  "Tabela de preços e lista de fornecedores",
-  "Certificado",
+  "Curso + Manual Visual",
+  "Guia SOS F1",
+  "Checklist F1 Express",
+  "Guia de formatos",
+  "Materiais complementares",
   "Acesso vitalício",
 ];
 
@@ -87,8 +82,7 @@ const faq = [
   { q: "Preciso comprar muitos materiais?", a: "Não. Você começa com um kit básico; mostramos exatamente o que comprar e onde." },
   { q: "O acesso é imediato?", a: "Sim. Assim que o pagamento é aprovado, você recebe o acesso no seu e-mail." },
   { q: "Por quanto tempo tenho acesso?", a: "Acesso vitalício. Assista quantas vezes quiser, no seu ritmo." },
-  { q: "Tem certificado?", a: "Sim. Ao concluir, você recebe o certificado para mostrar às suas clientes." },
-  { q: "Como recebo o curso?", a: "Pela plataforma de aulas, direto no celular ou computador, com login enviado por e-mail." },
+    { q: "Como recebo o curso?", a: "Pela plataforma de aulas, direto no celular ou computador, com login enviado por e-mail." },
 ];
 
 function Cta({ children, href = "#oferta", className = "" }: { children: React.ReactNode; href?: string; className?: string }) {
@@ -119,10 +113,10 @@ function Index() {
       <section className="px-5 pb-10 pt-6 text-center">
         <p className="text-xs font-bold tracking-[0.25em] text-rose-deep">MÉTODO F1 EXPRESS</p>
         <h1 className="mt-4 text-[34px] font-extrabold leading-[1.1] sm:text-[38px]">
-          Aprenda Molde F1 e faça alongamentos profissionais <span className="text-rose-deep">em até 1 hora</span>
+          Aprenda <span className="text-rose-deep">Molde F1</span> passo a passo
         </h1>
         <p className="mt-4 text-[18px] text-muted-foreground">
-          Mesmo começando do zero. Unhas resistentes, finas e com acabamento profissional, gastando menos tempo por cliente.
+          Um método visual e prático para entender preparação, escolha do molde, aplicação, estrutura e acabamento, mesmo se você estiver começando.
         </p>
         <img
           src={heroImg}
@@ -133,13 +127,31 @@ function Index() {
           fetchPriority="high"
         />
         <p className="mt-6 text-muted-foreground">
-          De <s>R$197</s>
+          De <s>R$97</s>
         </p>
         <p className="text-[22px] font-bold">
           Por apenas <span className="text-[34px] text-rose-deep">R$27,90</span>
         </p>
         <Cta className="mt-4">Quero aprender Molde F1</Cta>
-        <p className="mt-3 text-sm text-muted-foreground">Acesso imediato • Garantia de 7 dias</p>
+        <p className="mt-3 text-sm text-muted-foreground">🔓 Acesso imediato • 🛡️ Garantia de 7 dias</p>
+      </section>
+
+      {/* 1b. O QUE VAI APRENDER */}
+      <section className="px-5 pb-12">
+        <p className="text-center text-xs font-bold tracking-[0.25em] text-gold">VEJA O QUE VOCÊ VAI APRENDER</p>
+        <div className="mt-6 space-y-6">
+          {[
+            { img: cliente6, t: "01 · Escolha do molde", d: "Aprenda a identificar o tamanho e observar o encaixe." },
+            { img: cliente3, t: "02 · Aplicação passo a passo", d: "Veja visualmente cada etapa da construção." },
+            { img: cliente1Original, t: "03 · Acabamento", d: "Entenda o que observar para chegar a um resultado fino e harmonioso." },
+          ].map((x) => (
+            <div key={x.t}>
+              <img src={x.img} alt={x.t} width={700} height={700} loading="lazy" decoding="async" className="aspect-[4/3] w-full rounded-2xl object-cover" />
+              <p className="mt-3 text-[19px] font-bold">{x.t}</p>
+              <p className="text-muted-foreground">{x.d}</p>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* 2. DOR */}
@@ -206,12 +218,11 @@ function Index() {
         </ol>
       </section>
 
-      {/* 6. PROFESSORA */}
+      {/* 6. POSICIONAMENTO */}
       <section className="px-5 pb-12 text-center">
-        <img src={retratoImg} alt="Juliana Souza, nail designer" width={814} height={900} loading="lazy" decoding="async" className="mx-auto aspect-[4/5] w-[78%] rounded-2xl object-cover" />
-        <h2 className="mt-6 text-[28px] font-extrabold">Aprenda com Juliana Souza</h2>
+        <h2 className="text-[26px] font-extrabold leading-tight">Chega de vídeos rápidos e tutoriais soltos</h2>
         <p className="mt-3 text-[17px] text-muted-foreground">
-          Nail designer desde 2011, especialista em alongamentos. Criou o F1 Express para ensinar o caminho mais rápido até um acabamento profissional, sem enrolação.
+          Abra exatamente na etapa em que você está e veja o que fazer, o que observar e os erros mais comuns.
         </p>
       </section>
 
@@ -245,7 +256,7 @@ function Index() {
       <section id="oferta" className="scroll-mt-4 bg-accent px-5 py-14 text-center text-accent-foreground">
         <p className="text-xs font-bold tracking-[0.25em] text-rose">ACESSO IMEDIATO</p>
         <h2 className="mt-3 text-[32px] font-extrabold">Método F1 Express</h2>
-        <p className="opacity-85">Curso completo + bônus</p>
+        <p className="opacity-85">Curso + Manual Visual</p>
         <ul className="mx-auto mt-6 max-w-sm space-y-2 text-left">
           {inclusos.map((i) => (
             <li key={i} className="flex gap-3">
@@ -254,11 +265,11 @@ function Index() {
           ))}
         </ul>
         <p className="mt-8 text-lg opacity-70">
-          <s>R$197</s>
+          <s>R$97</s>
         </p>
         <p className="font-display text-[52px] font-extrabold leading-none text-gold">R$27,90</p>
         <p className="mt-2 opacity-80">Pagamento único</p>
-        <Cta href={CHECKOUT_URL} className="mt-6">Quero começar agora</Cta>
+        <Cta href={CHECKOUT_URL} className="mt-6">Quero acessar agora</Cta>
         <div className="mt-5 flex justify-center gap-4 text-sm opacity-90">
           <span className="flex items-center gap-1"><Lock className="size-4" /> Compra segura</span>
           <span className="flex items-center gap-1"><Zap className="size-4" /> Acesso imediato</span>
@@ -291,7 +302,7 @@ function Index() {
         </div>
       </section>
 
-      <footer className="px-5 pb-6 text-center text-xs text-muted-foreground">© F1 Express · Juliana Souza</footer>
+      <footer className="px-5 pb-6 text-center text-xs text-muted-foreground">© Método F1 Express</footer>
 
       {/* CTA FIXO */}
       <div
