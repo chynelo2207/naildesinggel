@@ -1,9 +1,9 @@
 import { ArrowRight } from "lucide-react";
 
-export const CHECKOUT_URL = "https://pay.cakto.com.br/pj5ktmj_1008708";
+export const CHECKOUT_URL = "https://pay.wiapy.com/LZ-eef2wJUQY";
 
-// Versão simples (R$ 19,90) — troque pelo link do produto simples na Cakto
-export const CHECKOUT_URL_SIMPLES = "https://pay.cakto.com.br/pj5ktmj_1008708";
+// Versão simples (R$ 19,90) — troque pelo link do produto simples na plataforma de pagamento
+export const CHECKOUT_URL_SIMPLES = "https://pay.wiapy.com/LZ-eef2wJUQY";
 
 export function CtaButton({
   children,
