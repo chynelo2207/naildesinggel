@@ -30,6 +30,7 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "preload", as: "image", href: heroImg, fetchPriority: "high" }],
   }),
   component: Index,
 });
@@ -126,6 +127,8 @@ function Index() {
         <img
           src={heroImg}
           alt="Alongamento em Molde F1 com acabamento profissional"
+          width={755}
+          height={900}
           className="mt-6 aspect-[4/5] w-full rounded-2xl object-cover"
           fetchPriority="high"
         />
@@ -157,7 +160,7 @@ function Index() {
 
       {/* 3. MECANISMO */}
       <section className="px-5 py-12">
-        <img src={cliente1} alt="Unhas construídas com Molde F1" loading="lazy" decoding="async" className="aspect-square w-full rounded-2xl object-cover" />
+        <img src={cliente1} alt="Unhas construídas com Molde F1" width={1110} height={1400} loading="lazy" decoding="async" className="aspect-square w-full rounded-2xl object-cover" />
         <p className="mt-8 text-xs font-bold tracking-[0.25em] text-gold">CONHEÇA A TÉCNICA</p>
         <h2 className="mt-2 text-[30px] font-extrabold">Molde F1</h2>
         <p className="mt-3 text-[17px] text-muted-foreground">
@@ -180,7 +183,7 @@ function Index() {
         <div className="mt-6 flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 [scrollbar-width:none]">
           {resultados.map((r) => (
             <figure key={r.label} className="w-[72%] shrink-0 snap-center">
-              <img src={r.src} alt={`Alongamento ${r.label}`} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-xl object-cover" />
+              <img src={r.src} alt={`Alongamento ${r.label}`} width={700} height={700} loading="lazy" decoding="async" className="aspect-[3/4] w-full rounded-xl object-cover" />
               <figcaption className="mt-2 text-center font-bold">{r.label}</figcaption>
             </figure>
           ))}
@@ -205,7 +208,7 @@ function Index() {
 
       {/* 6. PROFESSORA */}
       <section className="px-5 pb-12 text-center">
-        <img src={retratoImg} alt="Juliana Souza, nail designer" loading="lazy" decoding="async" className="mx-auto aspect-[4/5] w-[78%] rounded-2xl object-cover" />
+        <img src={retratoImg} alt="Juliana Souza, nail designer" width={814} height={900} loading="lazy" decoding="async" className="mx-auto aspect-[4/5] w-[78%] rounded-2xl object-cover" />
         <h2 className="mt-6 text-[28px] font-extrabold">Aprenda com Juliana Souza</h2>
         <p className="mt-3 text-[17px] text-muted-foreground">
           Nail designer desde 2011, especialista em alongamentos. Criou o F1 Express para ensinar o caminho mais rápido até um acabamento profissional, sem enrolação.
@@ -233,7 +236,7 @@ function Index() {
         <h2 className="text-center text-[28px] font-extrabold leading-tight">Trabalhos reais feitos com o método</h2>
         <div className="mt-6 grid grid-cols-2 gap-2">
           {[cliente2, cliente5, cliente7, cliente8].map((s, i) => (
-            <img key={i} src={s} alt="Trabalho real de aluna" loading="lazy" decoding="async" className="aspect-square w-full rounded-xl object-cover" />
+            <img key={i} src={s} alt="Trabalho real de aluna" width={700} height={700} loading="lazy" decoding="async" className="aspect-square w-full rounded-xl object-cover" />
           ))}
         </div>
       </section>
