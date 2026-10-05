@@ -77,10 +77,16 @@ const faq = [
     { q: "Como recebo o curso?", a: "Pela plataforma de aulas, direto no celular ou computador, com login enviado por e-mail." },
 ];
 
+function trackHumanIntent(event: string, details: Record<string, string> = {}) {
+  if (typeof window === "undefined") return;
+  window.dispatchEvent(new CustomEvent("f1-human-intent", { detail: { event, ...details } }));
+}
+
 function Cta({ children, href = "#oferta", className = "" }: { children: React.ReactNode; href?: string; className?: string }) {
   return (
     <a
       href={href}
+      onClick={() => trackHumanIntent("cta_click", { destination: href })}
       className={`flex min-h-14 w-full items-center justify-center rounded-xl bg-primary px-5 text-center text-[17px] font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-transform active:scale-[0.98] ${className}`}
     >
       {children}
@@ -288,7 +294,10 @@ function Index() {
             <p className="mt-3 text-sm text-muted-foreground">Oferta de entrada</p>
             <p className="mt-1 font-display text-[44px] font-extrabold leading-none text-rose-deep">R$9,90</p>
             <button
-              onClick={() => setShowUpsell(true)}
+              onClick={() => {
+    trackHumanIntent("basic_offer_click", { offer: "9.90" });
+    setShowUpsell(true);
+  }}
               className="mt-5 flex min-h-14 w-full items-center justify-center rounded-xl bg-primary px-4 text-center text-[16px] font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-transform active:scale-[0.98]"
             >
               Quero começar por R$9,90
@@ -396,12 +405,14 @@ function Index() {
             </p>
             <a
               href={CHECKOUT_URL_PROMO}
+              onClick={() => trackHumanIntent("checkout_click", { offer: "19.90" })}
               className="mt-5 flex min-h-14 w-full items-center justify-center rounded-xl bg-primary text-[16px] font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-transform active:scale-[0.98]"
             >
               Sim, quero o avançado por R$19,90
             </a>
             <a
               href={CHECKOUT_URL_SIMPLES}
+              onClick={() => trackHumanIntent("checkout_click", { offer: "9.90" })}
               className="mt-3 block text-sm font-semibold text-muted-foreground underline underline-offset-2"
             >
               Não, quero só o básico por R$9,90
