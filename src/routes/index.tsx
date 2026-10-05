@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Check, ChevronDown, Lock, ShieldCheck, Zap } from "lucide-react";
 
-import { CHECKOUT_URL } from "@/components/CtaButton";
+import { CHECKOUT_URL, CHECKOUT_URL_SIMPLES, CHECKOUT_URL_PROMO } from "@/components/CtaButton";
 import { SalesNotification } from "@/components/SalesNotification";
 import heroImg from "@/assets/hero-mentora.webp";
 import cliente1 from "@/assets/cliente-1.webp";
@@ -17,7 +17,7 @@ import cliente8 from "@/assets/cliente-8.webp";
 
 const TITLE = "Método F1 Express | Aprenda Molde F1 passo a passo";
 const DESC =
-  "Curso + manual visual de Molde F1: preparação, escolha do molde, aplicação, estrutura e acabamento. De R$97 por R$27,90.";
+  "Curso + manual visual de Molde F1: preparação, escolha do molde, aplicação, estrutura e acabamento. De R$97 por R$37,90.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -130,7 +130,7 @@ function Index() {
           De <s>R$97</s>
         </p>
         <p className="text-[22px] font-bold">
-          Por apenas <span className="text-[34px] text-rose-deep">R$27,90</span>
+          Por apenas <span className="text-[34px] text-rose-deep">R$37,90</span>
         </p>
         <Cta className="mt-4">Quero aprender Molde F1</Cta>
         <p className="mt-3 text-sm text-muted-foreground">🔓 Acesso imediato • 🛡️ Garantia de 7 dias</p>
@@ -311,7 +311,7 @@ function Index() {
         <div className="mx-auto flex h-16 max-w-xl items-center gap-3 px-4">
           <div className="min-w-0 flex-1 leading-tight">
             <p className="truncate text-sm font-bold">F1 Express</p>
-            <p className="text-sm font-bold text-rose-deep">R$27,90</p>
+            <p className="text-sm font-bold text-rose-deep">R$37,90</p>
           </div>
           <a href="#oferta" className="flex h-12 w-[58%] items-center justify-center rounded-xl bg-primary font-bold uppercase text-primary-foreground">
             Quero agora
