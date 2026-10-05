@@ -68,14 +68,6 @@ const recebe = [
   { icon: "📂", t: "Materiais complementares" },
 ];
 
-const inclusos = [
-  "Curso + Manual Visual",
-  "Guia SOS F1",
-  "Checklist F1 Express",
-  "Guia de formatos",
-  "Materiais complementares",
-  "Acesso vitalício",
-];
 
 const faq = [
   { q: "Preciso já trabalhar com unhas?", a: "Não. O método começa do zero. Se você já atende, vai corrigir erros e ganhar velocidade." },
@@ -257,38 +249,14 @@ function Index() {
       <section id="oferta" className="scroll-mt-4 bg-accent px-5 py-14 text-center text-accent-foreground">
         <p className="text-xs font-bold tracking-[0.25em] text-rose">ACESSO IMEDIATO</p>
         <h2 className="mt-3 text-[32px] font-extrabold">Método F1 Express</h2>
-        <p className="opacity-85">Curso + Manual Visual</p>
-        <ul className="mx-auto mt-6 max-w-sm space-y-2 text-left">
-          {inclusos.map((i) => (
-            <li key={i} className="flex gap-3">
-              <Check className="mt-1 size-5 shrink-0 text-primary" strokeWidth={3} /> {i}
-            </li>
-          ))}
-        </ul>
-        <div className="mt-8 grid gap-7 text-left">
-          {/* Plano avançado */}
-          <div className="relative rounded-2xl border-2 border-gold bg-accent-foreground/5 p-5">
-            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-accent">
-              Mais escolhido
-            </span>
-            <p className="text-[18px] font-bold">F1 Express Avançado</p>
-            <p className="mt-1 text-sm opacity-80">
-              Curso + Manual Visual, Guia SOS F1, Checklist F1 Express, Guia de formatos e Materiais complementares + acesso vitalício
-            </p>
-            <p className="mt-3 text-sm opacity-70">
-              <s>R$97</s>
-            </p>
-            <p className="font-display text-[40px] font-extrabold leading-none text-gold">R$37,90</p>
-            <Cta href={CHECKOUT_URL} className="mt-4">Quero acessar agora</Cta>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className="h-px flex-1 bg-accent-foreground/25" />
-            <span className="text-xs font-bold uppercase tracking-widest opacity-60">ou</span>
-            <span className="h-px flex-1 bg-accent-foreground/25" />
-          </div>
+
+        <div className="mt-8 space-y-8 text-left">
           {/* Plano básico */}
-          <div className="rounded-2xl border border-dashed border-accent-foreground/30 p-5">
-            <p className="text-[18px] font-bold">F1 Express Básico</p>
+          <div className="relative rounded-2xl border-2 border-dashed border-primary/60 bg-card p-5 text-accent-foreground">
+            <span className="absolute -top-3 left-5 rounded-full bg-primary px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-primary-foreground">
+              Para começar hoje
+            </span>
+            <p className="mt-2 text-[18px] font-bold">F1 Express Básico</p>
             <p className="mt-1 text-sm opacity-80">Curso + Manual Visual + todos os bônus + acesso vitalício</p>
             <p className="mt-3 font-display text-[32px] font-extrabold leading-none">R$9,90</p>
             <button
@@ -297,6 +265,36 @@ function Index() {
             >
               Quero o básico
             </button>
+          </div>
+
+          {/* Plano avançado */}
+          <div className="relative rounded-2xl border-2 border-gold bg-accent-foreground/5 p-5">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-accent">
+              Mais escolhido
+            </span>
+            <p className="text-[18px] font-bold">Método F1 Express</p>
+            <p className="mt-1 text-sm font-semibold opacity-80">Curso completo + bônus</p>
+            <ul className="mt-4 space-y-2">
+              {[
+                "Molde F1 passo a passo",
+                "Técnica para reduzir o tempo de atendimento",
+                "Preparação para evitar descolamento",
+                "Acabamento fino e natural",
+                "Módulo bônus de Fibra de Vidro",
+                "Tabela de preços e lista de fornecedores",
+                "Certificado",
+                "Acesso vitalício",
+              ].map((i) => (
+                <li key={i} className="flex gap-3 text-[15px]">
+                  <Check className="mt-0.5 size-5 shrink-0 text-primary" strokeWidth={3} /> {i}
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-sm opacity-70">
+              <s>R$97</s>
+            </p>
+            <p className="font-display text-[40px] font-extrabold leading-none text-gold">R$37,90</p>
+            <Cta href={CHECKOUT_URL} className="mt-4">Quero acessar agora</Cta>
           </div>
         </div>
         <div className="mt-5 flex justify-center gap-4 text-sm opacity-90">
@@ -312,7 +310,7 @@ function Index() {
         <p className="mt-3 text-[17px] text-muted-foreground">
           Assista às aulas, teste o método. Se não for para você, peça o reembolso em até 7 dias e devolvemos 100% do valor. Sem perguntas.
         </p>
-        <Cta href={CHECKOUT_URL} className="mt-6">Quero dominar o Molde F1</Cta>
+        <Cta className="mt-6">Quero dominar o Molde F1</Cta>
       </section>
 
       {/* 11. FAQ */}
@@ -339,8 +337,8 @@ function Index() {
       >
         <div className="mx-auto flex h-16 max-w-xl items-center gap-3 px-4">
           <div className="min-w-0 flex-1 leading-tight">
-            <p className="truncate text-sm font-bold">F1 Express</p>
-            <p className="text-sm font-bold text-rose-deep">R$37,90</p>
+            <p className="truncate text-sm font-bold">Método F1 Express</p>
+            <p className="truncate text-xs font-semibold text-muted-foreground">Toque para ver as ofertas</p>
           </div>
           <a href="#oferta" className="flex h-12 w-[58%] items-center justify-center rounded-xl bg-primary font-bold uppercase text-primary-foreground">
             Quero agora
