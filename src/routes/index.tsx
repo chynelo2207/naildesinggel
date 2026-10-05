@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Check, ChevronDown, Lock, ShieldCheck, Zap } from "lucide-react";
 
-import { CHECKOUT_URL } from "@/components/CtaButton";
+import { CHECKOUT_URL, CHECKOUT_URL_SIMPLES, CHECKOUT_URL_PROMO } from "@/components/CtaButton";
 import { SalesNotification } from "@/components/SalesNotification";
 import heroImg from "@/assets/hero-mentora.webp";
 import cliente1 from "@/assets/cliente-1.webp";
@@ -17,7 +17,7 @@ import cliente8 from "@/assets/cliente-8.webp";
 
 const TITLE = "Método F1 Express | Aprenda Molde F1 passo a passo";
 const DESC =
-  "Curso + manual visual de Molde F1: preparação, escolha do molde, aplicação, estrutura e acabamento. De R$97 por R$27,90.";
+  "Curso + manual visual de Molde F1: preparação, escolha do molde, aplicação, estrutura e acabamento. De R$97 por R$37,90.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -99,6 +99,7 @@ function Cta({ children, href = "#oferta", className = "" }: { children: React.R
 function Index() {
   const [showBar, setShowBar] = useState(false);
   const [open, setOpen] = useState<number | null>(0);
+  const [showUpsell, setShowUpsell] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setShowBar(window.scrollY > 700);
@@ -130,7 +131,7 @@ function Index() {
           De <s>R$97</s>
         </p>
         <p className="text-[22px] font-bold">
-          Por apenas <span className="text-[34px] text-rose-deep">R$27,90</span>
+          Por apenas <span className="text-[34px] text-rose-deep">R$37,90</span>
         </p>
         <Cta className="mt-4">Quero aprender Molde F1</Cta>
         <p className="mt-3 text-sm text-muted-foreground">🔓 Acesso imediato • 🛡️ Garantia de 7 dias</p>
@@ -264,12 +265,33 @@ function Index() {
             </li>
           ))}
         </ul>
-        <p className="mt-8 text-lg opacity-70">
-          <s>R$97</s>
-        </p>
-        <p className="font-display text-[52px] font-extrabold leading-none text-gold">R$27,90</p>
-        <p className="mt-2 opacity-80">Pagamento único</p>
-        <Cta href={CHECKOUT_URL} className="mt-6">Quero acessar agora</Cta>
+        <div className="mt-8 grid gap-4 text-left">
+          {/* Plano completo */}
+          <div className="relative rounded-2xl border-2 border-gold bg-accent-foreground/5 p-5">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-accent">
+              Mais escolhido
+            </span>
+            <p className="text-[18px] font-bold">F1 Express Completo</p>
+            <p className="mt-1 text-sm opacity-80">Curso + Manual Visual + todos os bônus + acesso vitalício</p>
+            <p className="mt-3 text-sm opacity-70">
+              <s>R$97</s>
+            </p>
+            <p className="font-display text-[40px] font-extrabold leading-none text-gold">R$37,90</p>
+            <Cta href={CHECKOUT_URL} className="mt-4">Quero acessar agora</Cta>
+          </div>
+          {/* Plano simples */}
+          <div className="rounded-2xl border border-accent-foreground/20 p-5">
+            <p className="text-[18px] font-bold">F1 Express Básico</p>
+            <p className="mt-1 text-sm opacity-80">Somente o Manual Visual, sem os bônus</p>
+            <p className="mt-3 font-display text-[32px] font-extrabold leading-none">R$9,90</p>
+            <button
+              onClick={() => setShowUpsell(true)}
+              className="mt-4 flex min-h-14 w-full items-center justify-center rounded-xl border-2 border-primary text-[15px] font-bold uppercase tracking-wide text-primary transition-transform active:scale-[0.98]"
+            >
+              Quero o básico
+            </button>
+          </div>
+        </div>
         <div className="mt-5 flex justify-center gap-4 text-sm opacity-90">
           <span className="flex items-center gap-1"><Lock className="size-4" /> Compra segura</span>
           <span className="flex items-center gap-1"><Zap className="size-4" /> Acesso imediato</span>
@@ -311,7 +333,7 @@ function Index() {
         <div className="mx-auto flex h-16 max-w-xl items-center gap-3 px-4">
           <div className="min-w-0 flex-1 leading-tight">
             <p className="truncate text-sm font-bold">F1 Express</p>
-            <p className="text-sm font-bold text-rose-deep">R$27,90</p>
+            <p className="text-sm font-bold text-rose-deep">R$37,90</p>
           </div>
           <a href="#oferta" className="flex h-12 w-[58%] items-center justify-center rounded-xl bg-primary font-bold uppercase text-primary-foreground">
             Quero agora
@@ -320,6 +342,40 @@ function Index() {
       </div>
 
       <SalesNotification />
+
+      {/* POP-UP UPSELL */}
+      {showUpsell && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-4 sm:items-center" onClick={() => setShowUpsell(false)}>
+          <div
+            className="w-full max-w-md rounded-2xl bg-card p-6 text-center shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-rose-deep">Espera! Oferta única</p>
+            <h3 className="mt-3 text-[24px] font-extrabold leading-tight">
+              Leve o F1 Express <span className="text-rose-deep">Completo</span> por apenas
+            </h3>
+            <p className="mt-2 text-lg text-muted-foreground">
+              <s>R$37,90</s>
+            </p>
+            <p className="font-display text-[48px] font-extrabold leading-none text-rose-deep">R$19,90</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Curso + Manual Visual + todos os bônus + acesso vitalício. Só nesta tela.
+            </p>
+            <a
+              href={CHECKOUT_URL_PROMO}
+              className="mt-5 flex min-h-14 w-full items-center justify-center rounded-xl bg-primary text-[16px] font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-transform active:scale-[0.98]"
+            >
+              Sim, quero o completo por R$19,90
+            </a>
+            <a
+              href={CHECKOUT_URL_SIMPLES}
+              className="mt-3 block text-sm font-semibold text-muted-foreground underline underline-offset-2"
+            >
+              Não, quero só o básico por R$9,90
+            </a>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
