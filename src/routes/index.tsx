@@ -359,7 +359,7 @@ function Index() {
           >
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-rose-deep">Espera! Oferta única</p>
             <h3 className="mt-3 text-[24px] font-extrabold leading-tight">
-              Leve o F1 Express <span className="text-rose-deep">Completo</span> por apenas
+              Leve o F1 Express <span className="text-rose-deep">Avançado</span> por apenas
             </h3>
             <p className="mt-2 text-lg text-muted-foreground">
               <s>R$37,90</s>
@@ -372,7 +372,7 @@ function Index() {
               href={CHECKOUT_URL_PROMO}
               className="mt-5 flex min-h-14 w-full items-center justify-center rounded-xl bg-primary text-[16px] font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-transform active:scale-[0.98]"
             >
-              Sim, quero o completo por R$19,90
+              Sim, quero o avançado por R$19,90
             </a>
             <a
               href={CHECKOUT_URL_SIMPLES}
