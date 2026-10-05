@@ -265,24 +265,31 @@ function Index() {
             </li>
           ))}
         </ul>
-        <div className="mt-8 grid gap-4 text-left">
-          {/* Plano completo */}
+        <div className="mt-8 grid gap-7 text-left">
+          {/* Plano avançado */}
           <div className="relative rounded-2xl border-2 border-gold bg-accent-foreground/5 p-5">
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-accent">
               Mais escolhido
             </span>
-            <p className="text-[18px] font-bold">F1 Express Completo</p>
-            <p className="mt-1 text-sm opacity-80">Curso + Manual Visual + todos os bônus + acesso vitalício</p>
+            <p className="text-[18px] font-bold">F1 Express Avançado</p>
+            <p className="mt-1 text-sm opacity-80">
+              Curso + Manual Visual, Guia SOS F1, Checklist F1 Express, Guia de formatos e Materiais complementares + acesso vitalício
+            </p>
             <p className="mt-3 text-sm opacity-70">
               <s>R$97</s>
             </p>
             <p className="font-display text-[40px] font-extrabold leading-none text-gold">R$37,90</p>
             <Cta href={CHECKOUT_URL} className="mt-4">Quero acessar agora</Cta>
           </div>
-          {/* Plano simples */}
-          <div className="rounded-2xl border border-accent-foreground/20 p-5">
+          <div className="flex items-center gap-3">
+            <span className="h-px flex-1 bg-accent-foreground/25" />
+            <span className="text-xs font-bold uppercase tracking-widest opacity-60">ou</span>
+            <span className="h-px flex-1 bg-accent-foreground/25" />
+          </div>
+          {/* Plano básico */}
+          <div className="rounded-2xl border border-dashed border-accent-foreground/30 p-5">
             <p className="text-[18px] font-bold">F1 Express Básico</p>
-            <p className="mt-1 text-sm opacity-80">Somente o Manual Visual, sem os bônus</p>
+            <p className="mt-1 text-sm opacity-80">Curso + Manual Visual + todos os bônus + acesso vitalício</p>
             <p className="mt-3 font-display text-[32px] font-extrabold leading-none">R$9,90</p>
             <button
               onClick={() => setShowUpsell(true)}

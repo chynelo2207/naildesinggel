@@ -2,11 +2,11 @@ import { ArrowRight } from "lucide-react";
 
 export const CHECKOUT_URL = "https://pay.wiapy.com/LZ-eef2wJUQY";
 
-// Versão simples (R$ 9,90) — troque pelo link do produto simples na plataforma de pagamento
-export const CHECKOUT_URL_SIMPLES = "https://pay.wiapy.com/LZ-eef2wJUQY";
+// Plano básico (R$ 9,90)
+export const CHECKOUT_URL_SIMPLES = "https://pay.wiapy.com/w3A7w7MmqGd";
 
-// Oferta especial do pop-up (R$ 19,90) — troque pelo link do produto promocional
-export const CHECKOUT_URL_PROMO = "https://pay.wiapy.com/LZ-eef2wJUQY";
+// Oferta especial do pop-up (R$ 19,90)
+export const CHECKOUT_URL_PROMO = "https://pay.wiapy.com/30p7MZ0ql8K0";
 
 export function CtaButton({
   children,
