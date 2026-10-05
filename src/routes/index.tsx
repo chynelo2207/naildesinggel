@@ -409,4 +409,7 @@ function Index() {
           </div>
         </div>
       )}
-    </main>\n    </>\n  );\n}
+    </main>
+    </>
+  );
+}
