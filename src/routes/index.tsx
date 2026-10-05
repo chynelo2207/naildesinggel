@@ -92,6 +92,24 @@ function Index() {
   const [showBar, setShowBar] = useState(false);
   const [open, setOpen] = useState<number | null>(0);
   const [showUpsell, setShowUpsell] = useState(false);
+  const [urgencySeconds, setUrgencySeconds] = useState(14 * 60);
+  const [todayLabel, setTodayLabel] = useState("");
+
+  useEffect(() => {
+    setTodayLabel(new Intl.DateTimeFormat("pt-BR", { day: "2-digit", month: "2-digit" }).format(new Date()));
+
+    const storageKey = "f1-express-urgency-end";
+    const storedEnd = Number(sessionStorage.getItem(storageKey));
+    const endAt = storedEnd > Date.now() ? storedEnd : Date.now() + 14 * 60 * 1000;
+    if (!storedEnd || storedEnd <= Date.now()) sessionStorage.setItem(storageKey, String(endAt));
+
+    const updateTimer = () => {
+      setUrgencySeconds(Math.max(0, Math.ceil((endAt - Date.now()) / 1000)));
+    };
+    updateTimer();
+    const timer = window.setInterval(updateTimer, 1000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setShowBar(window.scrollY > 700);
@@ -100,8 +118,17 @@ function Index() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const urgencyMinutes = String(Math.floor(urgencySeconds / 60)).padStart(2, "0");
+  const urgencySecs = String(urgencySeconds % 60).padStart(2, "0");
+
   return (
-    <main className="mx-auto max-w-xl overflow-x-hidden pb-24 text-[16px] leading-relaxed">
+    <>
+      <div className="sticky top-0 z-50 bg-red-700 px-3 py-2 text-center text-white shadow-md">
+        <p className="text-[12px] font-extrabold uppercase leading-tight sm:text-[13px]">
+          ⚠️ Condição especial de hoje {todayLabel} • <span className="tabular-nums">{urgencyMinutes}:{urgencySecs}</span>
+        </p>
+      </div>
+      <main className="mx-auto max-w-xl overflow-x-hidden pb-24 text-[16px] leading-relaxed">
       {/* 1. PROMESSA */}
       <section className="px-5 pb-10 pt-6 text-center">
         <p className="text-xs font-bold tracking-[0.25em] text-rose-deep">MÉTODO F1 EXPRESS</p>
@@ -382,6 +409,4 @@ function Index() {
           </div>
         </div>
       )}
-    </main>
-  );
-}
+    </main>\n    </>\n  );\n}
