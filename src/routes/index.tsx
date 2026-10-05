@@ -99,6 +99,7 @@ function Cta({ children, href = "#oferta", className = "" }: { children: React.R
 function Index() {
   const [showBar, setShowBar] = useState(false);
   const [open, setOpen] = useState<number | null>(0);
+  const [showUpsell, setShowUpsell] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setShowBar(window.scrollY > 700);
@@ -264,12 +265,33 @@ function Index() {
             </li>
           ))}
         </ul>
-        <p className="mt-8 text-lg opacity-70">
-          <s>R$97</s>
-        </p>
-        <p className="font-display text-[52px] font-extrabold leading-none text-gold">R$27,90</p>
-        <p className="mt-2 opacity-80">Pagamento único</p>
-        <Cta href={CHECKOUT_URL} className="mt-6">Quero acessar agora</Cta>
+        <div className="mt-8 grid gap-4 text-left">
+          {/* Plano completo */}
+          <div className="relative rounded-2xl border-2 border-gold bg-accent-foreground/5 p-5">
+            <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-gold px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-accent">
+              Mais escolhido
+            </span>
+            <p className="text-[18px] font-bold">F1 Express Completo</p>
+            <p className="mt-1 text-sm opacity-80">Curso + Manual Visual + todos os bônus + acesso vitalício</p>
+            <p className="mt-3 text-sm opacity-70">
+              <s>R$97</s>
+            </p>
+            <p className="font-display text-[40px] font-extrabold leading-none text-gold">R$37,90</p>
+            <Cta href={CHECKOUT_URL} className="mt-4">Quero acessar agora</Cta>
+          </div>
+          {/* Plano simples */}
+          <div className="rounded-2xl border border-accent-foreground/20 p-5">
+            <p className="text-[18px] font-bold">F1 Express Básico</p>
+            <p className="mt-1 text-sm opacity-80">Somente o Manual Visual, sem os bônus</p>
+            <p className="mt-3 font-display text-[32px] font-extrabold leading-none">R$9,90</p>
+            <button
+              onClick={() => setShowUpsell(true)}
+              className="mt-4 flex min-h-14 w-full items-center justify-center rounded-xl border-2 border-primary text-[15px] font-bold uppercase tracking-wide text-primary transition-transform active:scale-[0.98]"
+            >
+              Quero o básico
+            </button>
+          </div>
+        </div>
         <div className="mt-5 flex justify-center gap-4 text-sm opacity-90">
           <span className="flex items-center gap-1"><Lock className="size-4" /> Compra segura</span>
           <span className="flex items-center gap-1"><Zap className="size-4" /> Acesso imediato</span>
