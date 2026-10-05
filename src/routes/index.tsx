@@ -17,7 +17,7 @@ import cliente8 from "@/assets/cliente-8.webp";
 
 const TITLE = "Método F1 Express | Aprenda Molde F1 passo a passo";
 const DESC =
-  "Curso + manual visual de Molde F1: preparação, escolha do molde, aplicação, estrutura e acabamento. De R$97 por R$37,90.";
+  "Curso + manual visual de Molde F1: preparação, escolha do molde, aplicação, estrutura e acabamento. Oferta de entrada por R$9,90.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -123,7 +123,7 @@ function Index() {
           De <s>R$97</s>
         </p>
         <p className="text-[22px] font-bold">
-          Por apenas <span className="text-[34px] text-rose-deep">R$37,90</span>
+          A partir de <span className="text-[38px] text-rose-deep">R$9,90</span>
         </p>
         <Cta className="mt-4">Quero aprender Molde F1</Cta>
         <p className="mt-3 text-sm text-muted-foreground">🔓 Acesso imediato • 🛡️ Garantia de 7 dias</p>
@@ -252,18 +252,19 @@ function Index() {
 
         <div className="mt-8 space-y-8 text-left">
           {/* Plano básico */}
-          <div className="relative rounded-2xl border-2 border-dashed border-primary/60 bg-card p-5 text-accent-foreground">
+          <div className="relative rounded-2xl border-2 border-primary bg-background p-6 text-foreground shadow-xl">
             <span className="absolute -top-3 left-5 rounded-full bg-primary px-4 py-1 text-[11px] font-bold uppercase tracking-wide text-primary-foreground">
               Para começar hoje
             </span>
             <p className="mt-2 text-[18px] font-bold">F1 Express Básico</p>
-            <p className="mt-1 text-sm opacity-80">Curso + Manual Visual + todos os bônus + acesso vitalício</p>
-            <p className="mt-3 font-display text-[32px] font-extrabold leading-none">R$9,90</p>
+            <p className="mt-1 text-sm text-muted-foreground">Curso + Manual Visual + todos os bônus + acesso vitalício</p>
+            <p className="mt-3 text-sm text-muted-foreground">Oferta de entrada</p>
+            <p className="mt-1 font-display text-[44px] font-extrabold leading-none text-rose-deep">R$9,90</p>
             <button
               onClick={() => setShowUpsell(true)}
-              className="mt-4 flex min-h-14 w-full items-center justify-center rounded-xl border-2 border-primary text-[15px] font-bold uppercase tracking-wide text-primary transition-transform active:scale-[0.98]"
+              className="mt-5 flex min-h-14 w-full items-center justify-center rounded-xl bg-primary px-4 text-center text-[16px] font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-transform active:scale-[0.98]"
             >
-              Quero o básico
+              Quero começar por R$9,90
             </button>
           </div>
 
@@ -338,7 +339,7 @@ function Index() {
         <div className="mx-auto flex h-16 max-w-xl items-center gap-3 px-4">
           <div className="min-w-0 flex-1 leading-tight">
             <p className="truncate text-sm font-bold">Método F1 Express</p>
-            <p className="truncate text-xs font-semibold text-muted-foreground">Toque para ver as ofertas</p>
+            <p className="truncate text-xs font-semibold text-muted-foreground">Planos a partir de R$9,90</p>
           </div>
           <a href="#oferta" className="flex h-12 w-[58%] items-center justify-center rounded-xl bg-primary font-bold uppercase text-primary-foreground">
             Quero agora
