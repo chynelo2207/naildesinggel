@@ -342,6 +342,40 @@ function Index() {
       </div>
 
       <SalesNotification />
+
+      {/* POP-UP UPSELL */}
+      {showUpsell && (
+        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-4 sm:items-center" onClick={() => setShowUpsell(false)}>
+          <div
+            className="w-full max-w-md rounded-2xl bg-card p-6 text-center shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-rose-deep">Espera! Oferta única</p>
+            <h3 className="mt-3 text-[24px] font-extrabold leading-tight">
+              Leve o F1 Express <span className="text-rose-deep">Completo</span> por apenas
+            </h3>
+            <p className="mt-2 text-lg text-muted-foreground">
+              <s>R$37,90</s>
+            </p>
+            <p className="font-display text-[48px] font-extrabold leading-none text-rose-deep">R$19,90</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Curso + Manual Visual + todos os bônus + acesso vitalício. Só nesta tela.
+            </p>
+            <a
+              href={CHECKOUT_URL_PROMO}
+              className="mt-5 flex min-h-14 w-full items-center justify-center rounded-xl bg-primary text-[16px] font-bold uppercase tracking-wide text-primary-foreground shadow-lg transition-transform active:scale-[0.98]"
+            >
+              Sim, quero o completo por R$19,90
+            </a>
+            <a
+              href={CHECKOUT_URL_SIMPLES}
+              className="mt-3 block text-sm font-semibold text-muted-foreground underline underline-offset-2"
+            >
+              Não, quero só o básico por R$9,90
+            </a>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
