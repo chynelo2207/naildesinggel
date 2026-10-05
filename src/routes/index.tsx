@@ -84,14 +84,18 @@ function trackHumanIntent(event: string, details: Record<string, string> = {}) {
 
 function trackInitiateCheckout(offer: string, value: number) {
   trackHumanIntent("checkout_click", { offer });
-  const fbq = (window as Window & { fbq?: (...args: unknown[]) => void }).fbq;
-  if (typeof fbq === "function") {
-    fbq("track", "InitiateCheckout", {
-      content_name: "Método F1 Express",
-      content_category: offer,
-      currency: "BRL",
-      value,
-    });
+  try {
+    const fbq = (window as Window & { fbq?: (...args: unknown[]) => void }).fbq;
+    if (typeof fbq === "function") {
+      fbq("track", "InitiateCheckout", {
+        content_name: "Método F1 Express",
+        content_category: offer,
+        currency: "BRL",
+        value,
+      });
+    }
+  } catch {
+    // Analytics must never block checkout navigation.
   }
 }
 
